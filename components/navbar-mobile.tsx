@@ -69,7 +69,9 @@ export default function NavbarMobile() {
                 <div
                   className={cn(
                     "transition-all",
-                    path === "/portfolio" ? "text-rose-tan " : "text-bold ",
+                    path.includes("/portfolio")
+                      ? "text-rose-tan "
+                      : "text-bold ",
                   )}
                   onClick={() => router.push("/portfolio")}
                 >

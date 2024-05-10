@@ -10,6 +10,7 @@ type SliderProps = {
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
+import ImageSuspense from "./image-suspense";
 
 export default function SliderCommponent({ data }: SliderProps) {
   const [nav1, setNav1] = useState(null);
@@ -37,6 +38,11 @@ export default function SliderCommponent({ data }: SliderProps) {
               fill
               className="absolute object-cover"
             />
+            {/* <ImageSuspense
+              alt="BG"
+              src={item.filename}
+              className="absolute object-cover"
+            /> */}
           </div>
         ))}
       </Slider>

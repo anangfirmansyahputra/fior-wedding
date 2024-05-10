@@ -14,12 +14,12 @@ export default function Contact() {
         fill
         className="absolute z-[-2] object-cover"
       />
-      <div className="mx-auto max-w-screen-md space-y-20 px-8 py-8 lg:py-16">
-        <div>
-          <h2 className="mb-4 text-center text-4xl font-extrabold tracking-widest text-white">
+      <div className="mx-auto max-w-screen-md space-y-10 px-8 py-8 lg:space-y-20 lg:py-16">
+        <div className="space-y-5 md:space-y-10">
+          <h2 className="text-center text-2xl font-bold tracking-wider text-white md:text-3xl lg:text-4xl">
             CONTACT US
           </h2>
-          <p className="mb-8 text-center tracking-widest text-white">
+          <p className="mb-8 text-center text-sm tracking-widest text-white md:text-base">
             Got a technical issue? Want to send feedback about a beta feature?
             Need details about our Business plan? Let us know.
           </p>
@@ -70,7 +70,7 @@ export default function Contact() {
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             type="submit"
-            className="rounded bg-peach-whip px-10 py-3 text-white"
+            className="rounded bg-rose-tan px-10 py-3 text-white"
           >
             Send message
           </motion.button>

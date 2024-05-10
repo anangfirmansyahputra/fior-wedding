@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 import Package from "./package";
+import Testimonial from "./testimonial";
 
 export default function Services() {
   const services = [
@@ -39,9 +40,9 @@ export default function Services() {
   return (
     <>
       <div className="bg-[url('/assets/pattern.png')]">
-        <div className="container mx-auto space-y-10 py-48">
+        <div className="container mx-auto space-y-10 py-20 lg:py-48">
           <div className="space-y-5">
-            <h1 className="text-center text-5xl font-medium tracking-widest text-white">
+            <h1 className="text-center text-2xl font-medium tracking-widest text-white md:text-3xl lg:text-4xl">
               OUR SERVICES
             </h1>
             <p className="mx-auto max-w-[900px] text-center tracking-wide text-white">
@@ -52,8 +53,8 @@ export default function Services() {
             your every need`}
             </p>
           </div>
-          <div className="grid grid-cols-2 overflow-hidden rounded">
-            <div className="flex h-[calc(100%-7.5px)] flex-col justify-center bg-font md:space-y-5 md:p-10 xl:space-y-10 xl:p-16">
+          <div className="grid overflow-hidden rounded lg:grid-cols-2">
+            <div className="flex h-[calc(100%-7.5px)] flex-col justify-center space-y-5 bg-font p-5 md:p-10 xl:space-y-10 xl:p-16">
               {services.map((service) => (
                 <div
                   key={service.id}
@@ -69,36 +70,39 @@ export default function Services() {
               ))}
             </div>
 
-            <Slider {...settings}>
-              <div className="relative aspect-square">
-                <Image
-                  fill
-                  alt="BG"
-                  src="/assets/fior/Snapinsta.app_393229873_18286185490148018_2706991991568404417_n_1080.jpg"
-                  className="absolute object-cover"
-                />
-              </div>
-              <div className="relative aspect-square">
-                <Image
-                  fill
-                  alt="BG"
-                  src="/assets/fior/Snapinsta.app_31754729_438452316599342_5693099186593988608_n_1080.jpg"
-                  className="absolute object-cover"
-                />
-              </div>
-              <div className="relative aspect-square">
-                <Image
-                  fill
-                  alt="BG"
-                  src="/assets/fior/Snapinsta.app_126924523_659412038074452_5764577106197071831_n_1080.jpg"
-                  className="absolute object-cover"
-                />
-              </div>
-            </Slider>
+            <div className="hidden lg:block">
+              <Slider {...settings}>
+                <div className="relative aspect-square">
+                  <Image
+                    fill
+                    alt="BG"
+                    src="/assets/fior/Snapinsta.app_393229873_18286185490148018_2706991991568404417_n_1080.jpg"
+                    className="absolute object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square">
+                  <Image
+                    fill
+                    alt="BG"
+                    src="/assets/fior/Snapinsta.app_31754729_438452316599342_5693099186593988608_n_1080.jpg"
+                    className="absolute object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square">
+                  <Image
+                    fill
+                    alt="BG"
+                    src="/assets/fior/Snapinsta.app_126924523_659412038074452_5764577106197071831_n_1080.jpg"
+                    className="absolute object-cover"
+                  />
+                </div>
+              </Slider>
+            </div>
           </div>
         </div>
       </div>
       <Package />
+      <Testimonial />
     </>
   );
 }

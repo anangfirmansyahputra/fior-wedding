@@ -85,28 +85,28 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 <div className="font-bold text-rose-tan">Share :</div>
                 <div className="space-x-2">
                   <Button
-                    variant="default"
+                    variant="secondary"
                     size="icon"
                     className="rounded-full"
                   >
                     <FacebookIcon />
                   </Button>
                   <Button
-                    variant="default"
+                    variant="secondary"
                     size="icon"
                     className="rounded-full"
                   >
                     <Twitter />
                   </Button>
                   <Button
-                    variant="default"
+                    variant="secondary"
                     size="icon"
                     className="rounded-full"
                   >
                     <Instagram />
                   </Button>
                   <Button
-                    variant="default"
+                    variant="secondary"
                     size="icon"
                     className="rounded-full"
                   >

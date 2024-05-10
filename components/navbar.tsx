@@ -41,24 +41,26 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 z-[50]">
-      <div className="h-[40px] bg-font font-carmorant">
-        <div className="container mx-auto flex h-full items-center justify-between text-white">
-          <p className="hidden text-xs md:block">
-            QUANTITY OUR STANDING
-            <span className="font-medium">FOR OVER 40 YEARS</span>
-          </p>
-          <div className="hidden items-center space-x-2 md:flex">
+      <div className="h-[40px] bg-font font-semplicita">
+        <Link
+          href={
+            "https://www.google.com/maps/place/PT.+Cerita+Dua+Hati+(FIOR+ORGANIZER)/@-6.1975741,106.7593279,17z/data=!4m10!1m2!2m1!1sPT+CERITA+DUA+HATI+BUSINESS+PARK+KEBON+JERUK+LEVEL+MEZZANINE+JL.+MERUYA+ILIR+NO.88+KEBON+JERUK+JAKARTA+BARAT+11610!3m6!1s0x2e69f7a66d739989:0xf3fdc8e672212574!8m2!3d-6.1980321!4d106.7620288!15sCnJQVCBDRVJJVEEgRFVBIEhBVEkgQlVTSU5FU1MgUEFSSyBLRUJPTiBKRVJVSyBMRVZFTCBNRVpaQU5JTkUgSkwuIE1FUlVZQSBJTElSIE5PLjg4IEtFQk9OIEpFUlVLIEpBS0FSVEEgQkFSQVQgMTE2MTCSAQ1ldmVudF9wbGFubmVy4AEA!16s%2Fg%2F11h59zc270?entry=ttu"
+          }
+          target="_blank"
+          className="container mx-auto flex h-full items-center justify-end text-white"
+        >
+          <div className="hidden items-center space-x-2 lg:flex">
             <MapPin size={12} />
-            <p className="text-xs">
+            <p className="text-[10px] tracking-widest">
               PT CERITA DUA HATI BUSINESS PARK KEBON JERUK LEVEL MEZZANINE JL.
               MERUYA ILIR NO.88 KEBON JERUK JAKARTA BARAT 11610
             </p>
           </div>
-          <div className="flex items-center space-x-2 md:hidden">
+          <div className="flex items-center space-x-2 lg:hidden">
             <MapPin size={12} />
-            <p className="text-xs">Location</p>
+            <p className="text-xs">LOCATION</p>
           </div>
-        </div>
+        </Link>
       </div>
       <header
         className={cn(
@@ -68,7 +70,7 @@ export default function Navbar() {
             : "bg-neutral-background ",
         )}
       >
-        <div className=" container mx-auto grid h-[80px] grid-cols-3 items-center justify-center md:flex lg:h-[80px] xl:h-[100px]">
+        <div className=" container mx-auto flex h-[80px] items-center justify-center md:flex md:grid-cols-3 lg:h-[80px] xl:h-[100px]">
           <div className="flex flex-1 items-center justify-end space-x-10">
             <Link
               href={"/"}
@@ -111,7 +113,7 @@ export default function Navbar() {
               CONTACT
             </Link>
           </div>
-          <div className="flex justify-end md:hidden">
+          <div className="flex flex-1 justify-end md:hidden">
             <NavbarMobile />
           </div>
         </div>

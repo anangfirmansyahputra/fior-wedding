@@ -1,6 +1,12 @@
+"use client";
+
 import Image from "next/image";
+import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 export default function SectionWelcome() {
+  const router = useRouter();
+
   return (
     <div className="">
       <div className="container mx-auto grid pb-36 pt-28 md:grid-cols-2 lg:pb-72 lg:pt-36">
@@ -13,9 +19,12 @@ export default function SectionWelcome() {
               Welcome to FIOR Wedding Event Organizer
             </p>
           </div>
-          <button className="mx-auto rounded bg-dark-accent px-5 py-3 text-lg font-medium text-bold shadow-md transition-all duration-200 hover:bg-light-accent md:mx-0 lg:px-10 lg:py-5">
-            SEE OUR SERVICES
-          </button>
+          <Button
+            onClick={() => router.push("/about")}
+            className="mx-auto py-7 md:mx-0 md:text-lg lg:py-10 lg:text-xl"
+          >
+            ABOUT US
+          </Button>
         </div>
         <div className="relative mt-10 md:mt-0">
           <div className="relative aspect-square overflow-hidden rounded">
