@@ -53,14 +53,16 @@ export default function Services() {
             </p>
           </div>
           <div className="grid grid-cols-2 overflow-hidden rounded">
-            <div className="flex h-[calc(100%-7.5px)] flex-col justify-center space-y-10 bg-font p-16">
+            <div className="flex h-[calc(100%-7.5px)] flex-col justify-center bg-font md:space-y-5 md:p-10 xl:space-y-10 xl:p-16">
               {services.map((service) => (
                 <div
                   key={service.id}
-                  className="space-y-5 border-b-2 border-dark-accent pb-5 text-dark-accent"
+                  className="space-y-3 border-b-2 border-dark-accent pb-5 text-dark-accent lg:space-y-5"
                 >
-                  <h3 className="text-3xl font-medium">{service.title}</h3>
-                  <p className="text-lg tracking-wider">
+                  <h3 className="text-xl font-medium xl:text-3xl">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm tracking-wider xl:text-lg">
                     {service.description}
                   </p>
                 </div>

@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="font-semplicita bg-background">
-      <div className="container mx-auto p-4 py-6 lg:py-20">
+    <footer className="bg-neutral-background font-semplicita">
+      <div className="container mx-auto p-4 px-10 py-6 md:px-10 md:py-20 2xl:px-0">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="https://flowbite.com/" className="flex items-center">
@@ -12,7 +12,7 @@ export default function Footer() {
                 className="me-3 h-8"
                 alt="FlowBite Logo"
               /> */}
-              <span className="font-semplicita self-center whitespace-nowrap text-2xl font-semibold tracking-widest text-font">
+              <span className="self-center whitespace-nowrap font-semplicita text-2xl font-semibold tracking-widest text-font">
                 FIOR
               </span>
             </a>
@@ -80,9 +80,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
+        <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
             © 2024{" "}
             <a
               href="https://flowbite.com/"

@@ -8,8 +8,13 @@ export default function Contact() {
   return (
     <section className="relative py-20">
       <div className="absolute top-0 z-[-1] flex h-full w-full flex-col items-center justify-center space-y-10 bg-[rgba(0,0,0,0.5)]"></div>
-      <Image src="/assets/bg2.jpg" alt="BG" fill className="absolute z-[-2]" />
-      <div className="mx-auto max-w-screen-md space-y-20 px-4 py-8 lg:py-16">
+      <Image
+        src="/assets/bg2.jpg"
+        alt="BG"
+        fill
+        className="absolute z-[-2] object-cover"
+      />
+      <div className="mx-auto max-w-screen-md space-y-20 px-8 py-8 lg:py-16">
         <div>
           <h2 className="mb-4 text-center text-4xl font-extrabold tracking-widest text-white">
             CONTACT US
@@ -21,7 +26,7 @@ export default function Contact() {
         </div>
         <form action="#" className="space-y-8">
           <div>
-            <label className="text-sea-salt mb-2 block text-sm font-medium">
+            <label className="mb-2 block text-sm font-medium text-sea-salt">
               Your email
             </label>
             <input
@@ -35,7 +40,7 @@ export default function Contact() {
           <div>
             <label
               // for="subject"
-              className="text-sea-salt mb-2 block text-sm font-medium"
+              className="mb-2 block text-sm font-medium text-sea-salt"
             >
               Subject
             </label>
@@ -50,7 +55,7 @@ export default function Contact() {
           <div className="sm:col-span-2">
             <label
               // for="message"
-              className="text-sea-salt mb-2 block text-sm font-medium"
+              className="mb-2 block text-sm font-medium text-sea-salt"
             >
               Your message
             </label>
@@ -65,7 +70,7 @@ export default function Contact() {
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             type="submit"
-            className="bg-peach-whip rounded px-10 py-3 text-white"
+            className="rounded bg-peach-whip px-10 py-3 text-white"
           >
             Send message
           </motion.button>

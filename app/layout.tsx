@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-carmorant">
+      <body className="relative font-carmorant">
         <Navbar />
         {children}
         <Footer />

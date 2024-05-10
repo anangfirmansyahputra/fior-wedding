@@ -22,7 +22,7 @@ const config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        // background: "hsl(var(--background))",
+        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -53,7 +53,7 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         font: "#2B2B2B",
-        background: "#FBF8F1",
+        "neutral-background": "#FBF8F1",
         bold: "#232B35",
         "dark-accent": "#D1C7BE",
         "light-accent": "#D9BDBA",
