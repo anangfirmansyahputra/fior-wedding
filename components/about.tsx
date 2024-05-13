@@ -53,13 +53,13 @@ export default function About() {
       </div>
       <div className="bg-sea-salt py-32">
         <div className="container mx-auto grid gap-x-10 md:grid-cols-2">
-          <div className="bg-neutral-background flex flex-col justify-center space-y-4 rounded p-10 shadow">
+          <div className="flex flex-col justify-center space-y-4 rounded bg-neutral-background p-10 shadow">
             <h2 className="text-4xl font-semibold md:text-5xl lg:text-6xl">
               BEHIND FIOR
             </h2>
             <p className="tracking-widest">GET TO KNOW US</p>
           </div>
-          <div className="bg-neutral-background space-y-10 rounded p-5 shadow md:space-y-5 md:p-10">
+          <div className="space-y-10 rounded bg-neutral-background p-5 shadow md:space-y-5 md:p-10">
             <div className="flex flex-col gap-x-5 sm:flex-row">
               <div className="relative aspect-square sm:h-[120px] sm:w-[120px]">
                 <Image fill alt="People" src="/assets/fior/people1.png" />
