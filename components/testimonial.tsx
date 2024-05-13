@@ -1,3 +1,5 @@
+"use client";
+
 import { Star } from "lucide-react";
 import Image from "next/image";
 import Slider from "react-slick";
@@ -7,18 +9,36 @@ export default function Testimonial() {
     dots: true,
     infinite: true,
     speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+
+  const settingsMd = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  };
+
+  const settingsSm = {
+    dots: true,
+    infinite: true,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    adaptiveHeight: true,
   };
 
   const testimonials = [
     {
       id: 1,
-      text: "<p>Mau apapun di wedding kalian, Voila, Fior will make it happen! Fior is literally our genie haha. Dari pertama kali ketemu di wedding fair, mreka udah super ramah. Dan mreka bener2 ngikutin budget dan keinginan kita. Kerennya, aku mnta apapun di wedding ku pasti dijawab bisa, dan mreka will make it work no matter how. On the other hand they will also give you their honest opinion. And our energy somehow match, jadi tektok annya pas bgt dan mreka sat set sat set bgt, jd enak bgt lah ga pake lama kalo mau apa2. Untuk aku yang orangnya lumayan merhatiin details dan perintilan, mreka itu kerjanya rapih dan disiplin. Trus super fleksibel kalo mau janjian meeting malem pun dijabanin. Pokoknya dari persiapan sampe hari H smua super smooth. Hari H pun tenang aja percayakan smua ke fior, bride and groom tinggal duduk manis ngikutin acara dan have a lot of fun! Smuanya serba gercep and very thoughtful. Keluarga dan tamu jg bs menilai kalau semua well organized. Thank you fior, you guys are not only our wedding organizer but also our friend now :)) a good one! Sukses terus buat fior woohoo!!</p>",
-      name: "Sisca & Mirsha",
-      created_at: "23 Agustus 2023",
-      as: "Pengantin perempuan di Pernikahan Mirsha & Francisca",
-      strong: "NOT JUST AN ORDINARY WO!",
+      text: `<p>Sukses dan bahagia selalu buat tim FIOR,
+      See ya next time guys. Chersss !</p>`,
+      name: "Wild Love Stories",
+      created_at: "01 Mei 2021",
+      as: "Vendor rekanan di Pernikahan ",
+      strong: "WILD",
       image: "/assets/profile.png",
       star: 5,
     },
@@ -61,68 +81,196 @@ export default function Testimonial() {
   ];
 
   return (
-    <div className="bg-neutral-background">
-      <div className="container mx-auto space-y-10 py-20 md:py-48">
+    <div className="relative bg-neutral-background">
+      <div className="container relative mx-auto space-y-10 py-20 md:py-48">
         <h2 className="text-center text-2xl font-bold tracking-wider text-bold md:text-3xl lg:text-4xl">
           TESTIMONIALS
         </h2>
 
-        <div className="mt-20 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial) => {
-            const star = Array(testimonial.star).fill(true);
-            const unstar = Array(5 - testimonial.star).fill(true);
+        <div className="mx-auto hidden h-fit lg:block">
+          <Slider {...settings} className="mt-20">
+            {testimonials.map((testimonial) => {
+              const star = Array(testimonial.star).fill(true);
+              const unstar = Array(5 - testimonial.star).fill(true);
 
-            return (
-              <div
-                key={testimonial.id}
-                className="h-fit rounded-sm bg-white p-5 shadow-lg"
-              >
-                <h5 className="font-semplicita font-semibold">
-                  {testimonial.strong}
-                </h5>
+              return (
                 <div
-                  className="mt-5 space-y-3 text-sm"
-                  dangerouslySetInnerHTML={{
-                    __html: testimonial.text,
-                  }}
-                />
-                <div className="mt-3 flex items-center space-x-5">
-                  <Image
-                    src={testimonial.image}
-                    width={30}
-                    height={30}
-                    alt={testimonial.name}
-                    className="rounded-full"
+                  key={testimonial.id}
+                  className="mb-5 h-fit rounded-sm bg-white p-5 shadow"
+                >
+                  <h5 className="font-semplicita font-semibold">
+                    {testimonial.strong}
+                  </h5>
+                  <div
+                    className="mt-5 space-y-3 text-sm"
+                    dangerouslySetInnerHTML={{
+                      __html: testimonial.text,
+                    }}
                   />
-                  <div>
+                  <div className="mt-3 flex items-center space-x-5">
+                    <Image
+                      src={testimonial.image}
+                      width={30}
+                      height={30}
+                      alt={testimonial.name}
+                      className="rounded-full"
+                    />
                     <div>
-                      <p className="font-medium text-rose-tan">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-xs text-slate-600">{testimonial.as}</p>
+                      <div>
+                        <p className="font-medium text-rose-tan">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-xs text-slate-600">
+                          {testimonial.as}
+                        </p>
+                      </div>
+                      <p className="mt-1 text-xs">{testimonial.created_at}</p>
                     </div>
-                    <p className="mt-1 text-xs">{testimonial.created_at}</p>
+                  </div>
+                  <div className="mt-3 flex w-full justify-end">
+                    {unstar.map((s, i) => (
+                      <Star
+                        key={i}
+                        className="fill-white text-slate-300"
+                        size={20}
+                      />
+                    ))}
+                    {star.map((s, i) => (
+                      <Star
+                        key={i}
+                        className="fill-yellow-300 text-yellow-300"
+                        size={20}
+                      />
+                    ))}
                   </div>
                 </div>
-                <div className="mt-3 flex w-full justify-end">
-                  {unstar.map((s, i) => (
-                    <Star
-                      key={i}
-                      className="fill-white text-slate-300"
-                      size={20}
+              );
+            })}
+          </Slider>
+        </div>
+
+        <div className="mx-auto hidden h-fit px-5 md:block lg:hidden">
+          <Slider {...settingsMd} className="mt-20">
+            {testimonials.map((testimonial) => {
+              const star = Array(testimonial.star).fill(true);
+              const unstar = Array(5 - testimonial.star).fill(true);
+
+              return (
+                <div
+                  key={testimonial.id}
+                  className="mb-5 h-fit rounded-sm bg-white p-5 shadow"
+                >
+                  <h5 className="font-semplicita font-semibold">
+                    {testimonial.strong}
+                  </h5>
+                  <div
+                    className="mt-5 space-y-3 text-sm"
+                    dangerouslySetInnerHTML={{
+                      __html: testimonial.text,
+                    }}
+                  />
+                  <div className="mt-3 flex items-center space-x-5">
+                    <Image
+                      src={testimonial.image}
+                      width={30}
+                      height={30}
+                      alt={testimonial.name}
+                      className="rounded-full"
                     />
-                  ))}
-                  {star.map((s, i) => (
-                    <Star
-                      key={i}
-                      className="fill-yellow-300 text-yellow-300"
-                      size={20}
-                    />
-                  ))}
+                    <div>
+                      <div>
+                        <p className="font-medium text-rose-tan">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-xs text-slate-600">
+                          {testimonial.as}
+                        </p>
+                      </div>
+                      <p className="mt-1 text-xs">{testimonial.created_at}</p>
+                    </div>
+                  </div>
+                  <div className="mt-3 flex w-full justify-end">
+                    {unstar.map((s, i) => (
+                      <Star
+                        key={i}
+                        className="fill-white text-slate-300"
+                        size={20}
+                      />
+                    ))}
+                    {star.map((s, i) => (
+                      <Star
+                        key={i}
+                        className="fill-yellow-300 text-yellow-300"
+                        size={20}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </Slider>
+        </div>
+
+        <div className="mx-auto block h-fit px-5 md:hidden">
+          <Slider {...settingsSm} className="mt-20">
+            {testimonials.map((testimonial) => {
+              const star = Array(testimonial.star).fill(true);
+              const unstar = Array(5 - testimonial.star).fill(true);
+
+              return (
+                <div
+                  key={testimonial.id}
+                  className="mb-5 h-fit rounded-sm bg-white p-5 shadow"
+                >
+                  <h5 className="font-semplicita font-semibold">
+                    {testimonial.strong}
+                  </h5>
+                  <div
+                    className="mt-5 space-y-3 text-sm"
+                    dangerouslySetInnerHTML={{
+                      __html: testimonial.text,
+                    }}
+                  />
+                  <div className="mt-3 flex items-center space-x-5">
+                    <Image
+                      src={testimonial.image}
+                      width={30}
+                      height={30}
+                      alt={testimonial.name}
+                      className="rounded-full"
+                    />
+                    <div>
+                      <div>
+                        <p className="font-medium text-rose-tan">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-xs text-slate-600">
+                          {testimonial.as}
+                        </p>
+                      </div>
+                      <p className="mt-1 text-xs">{testimonial.created_at}</p>
+                    </div>
+                  </div>
+                  <div className="mt-3 flex w-full justify-end">
+                    {unstar.map((s, i) => (
+                      <Star
+                        key={i}
+                        className="fill-white text-slate-300"
+                        size={20}
+                      />
+                    ))}
+                    {star.map((s, i) => (
+                      <Star
+                        key={i}
+                        className="fill-yellow-300 text-yellow-300"
+                        size={20}
+                      />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
         </div>
       </div>
     </div>

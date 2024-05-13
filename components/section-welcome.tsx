@@ -8,8 +8,15 @@ export default function SectionWelcome() {
   const router = useRouter();
 
   return (
-    <div className="">
-      <div className="container mx-auto grid pb-36 pt-28 md:grid-cols-2 lg:pb-72 lg:pt-36">
+    <div className="relative">
+      <Image
+        src={"/assets/border2.png"}
+        fill
+        alt="Border"
+        className="absolute z-[0] object-cover"
+      />
+
+      <div className="container relative mx-auto grid pb-36 pt-28 md:grid-cols-2 lg:pb-72 lg:pt-36">
         <div className="flex flex-col items-start justify-center space-y-5">
           <div className="w-full space-y-5 text-center md:text-start lg:space-y-10">
             <h1 className="text-3xl font-medium tracking-wider text-bold md:max-w-[500px] md:text-4xl lg:text-5xl xl:text-6xl">

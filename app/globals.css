@@ -154,3 +154,8 @@
 .slick-dots {
   bottom: -60px !important;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000 !important;
+}

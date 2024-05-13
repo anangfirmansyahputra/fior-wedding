@@ -5,6 +5,7 @@ import Package from "@/components/package";
 import SectionWelcome from "@/components/section-welcome";
 import Services from "@/components/services";
 import Template from "@/components/template";
+import Testimonial from "@/components/testimonial";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       {/* <Services /> */}
       {/* <Package /> */}
       {/* <HireUs /> */}
+      <Testimonial />
     </Template>
   );
 }

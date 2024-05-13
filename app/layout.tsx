@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="relative font-carmorant">
+      <body className="relative font-carmorant" suppressHydrationWarning={true}>
         <Navbar />
         {children}
         <Footer />

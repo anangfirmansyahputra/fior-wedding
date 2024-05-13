@@ -102,7 +102,6 @@ export default function Services() {
         </div>
       </div>
       <Package />
-      <Testimonial />
     </>
   );
 }
