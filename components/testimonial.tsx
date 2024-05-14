@@ -11,6 +11,7 @@ export default function Testimonial() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
   };
 
   const settingsMd = {
@@ -19,6 +20,7 @@ export default function Testimonial() {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    autoplay: true,
   };
 
   const settingsSm = {
@@ -28,6 +30,7 @@ export default function Testimonial() {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    autoplay: true,
   };
 
   const testimonials = [
