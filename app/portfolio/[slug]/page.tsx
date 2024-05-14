@@ -3,13 +3,7 @@ import Template from "@/components/template";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import dayjs from "dayjs";
-import {
-  FacebookIcon,
-  Instagram,
-  Share,
-  Share2Icon,
-  Twitter,
-} from "lucide-react";
+import { FacebookIcon, Instagram, Share2Icon, Twitter } from "lucide-react";
 import Image from "next/image";
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -17,22 +11,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
     `${process.env.API_URL}/api/articles/${params.slug}`,
   );
 
-  // const data = {
-  //   data: {
-  //     id: "1231231",
-  //     title: "Tips Memilih Gaun Pernikahan yang Tepat",
-  //     content:
-  //       "<p>Mencari gaun pernikahan yang sempurna adalah salah satu bagian paling penting dari persiapan pernikahan Anda. Berikut adalah beberapa tips untuk membantu Anda memilih gaun yang tepat:</p><ul><li><strong>Kenali Bentuk Tubuh Anda</strong>: Pilihlah gaun yang sesuai dengan bentuk tubuh Anda untuk memastikan gaun tersebut nyaman dan membuat Anda merasa percaya diri.</li><li><strong>Cari Inspirasi</strong>: Telusuri majalah pernikahan, situs web, dan media sosial untuk mencari inspirasi tentang gaya gaun yang Anda sukai.</li><li><strong>Pilihlah Warna yang Sesuai</strong>: Pertimbangkan warna gaun yang akan cocok dengan warna kulit Anda dan tema pernikahan Anda.</li><li><strong>Jangan Lupakan Aksesori</strong>: Perhatikan aksesori seperti veil, sepatu, dan perhiasan yang akan melengkapi penampilan Anda.</li><li><strong>Cocokkan dengan Tema Pernikahan</strong>: Pastikan gaun Anda sesuai dengan tema pernikahan Anda agar terlihat selaras dengan dekorasi dan suasana acara.</li></ul>",
-  //     slug: "tips-memilih-gaun-pernikahan",
-  //     author: "Jane Smith",
-  //     images: "/assets/bg1.jpg",
-  //   },
-  // };
-
   return (
     <Template>
       <>
-        <main className="bg-neutral-background pb-16 pt-8 antialiased dark:bg-gray-900 lg:pb-24 lg:pt-16">
+        <article className="bg-neutral-background pb-16 pt-8 antialiased dark:bg-gray-900 lg:pb-24 lg:pt-16">
           <div className="container mx-auto flex items-center justify-center px-4">
             <article className="w-full max-w-4xl rounded-xl bg-white p-5 shadow-lg  md:p-10">
               <header className="not-format mb-4 lg:mb-6">
@@ -79,6 +61,42 @@ export default async function Page({ params }: { params: { slug: string } }) {
                   __html: data.data.content,
                 }}
               ></div>
+
+              <div className="mt-10 grid grid-cols-2 gap-2">
+                <div className="relative aspect-square">
+                  <Image
+                    fill
+                    className="absolute h-auto max-w-full rounded-lg object-cover"
+                    src="/assets/bg1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="relative aspect-square">
+                  <Image
+                    fill
+                    className="absolute h-auto max-w-full rounded-lg object-cover"
+                    src="/assets/bg2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="relative aspect-square">
+                  <Image
+                    fill
+                    className="absolute h-auto max-w-full rounded-lg object-cover"
+                    src="/assets/bg3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="relative aspect-square">
+                  <Image
+                    fill
+                    className="absolute h-auto max-w-full rounded-lg object-cover"
+                    src="/assets/bg4.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
               <hr className="my-5" />
               <div className="flex items-center space-x-5">
                 <div className="font-bold text-rose-tan">Share :</div>
@@ -115,7 +133,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
               </div>
             </article>
           </div>
-        </main>
+        </article>
       </>
       <CreateWedding />
     </Template>

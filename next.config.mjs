@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "divanafaradila.com",
       },
+      {
+        protocol: "https",
+        hostname: "flowbite.s3.amazonaws.com",
+      },
     ],
   },
 };

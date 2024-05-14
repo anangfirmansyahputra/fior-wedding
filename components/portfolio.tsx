@@ -10,34 +10,15 @@ type PropsPortfolio = {
   }[];
 };
 
+import { cn } from "@/lib/utils";
 import axios from "axios";
 import Card from "./card";
 import SliderCommponent from "./slider";
-import { cn } from "@/lib/utils";
-
-export const revalidate = 10; // revalidate at most every hour
 
 export default async function Portfolio({ data }: PropsPortfolio) {
   const { data: portfolios } = await axios.get(
     `${process.env.API_URL}/api/galleries`,
   );
-
-  // const portfolios = {
-  //   data: [
-  //     {
-  //       id: "1",
-  //       filename: "/assets/bg1.jpg",
-  //     },
-  //     {
-  //       id: "2",
-  //       filename: "/assets/bg2.jpg",
-  //     },
-  //     {
-  //       id: "3",
-  //       filename: "/assets/bg3.jpg",
-  //     },
-  //   ],
-  // };
 
   return (
     <div className="bg-neutral-background py-20">
