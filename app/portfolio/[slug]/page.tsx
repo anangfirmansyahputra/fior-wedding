@@ -1,3 +1,4 @@
+import CreateWedding from "@/components/create-wedding";
 import Template from "@/components/template";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
@@ -12,21 +13,21 @@ import {
 import Image from "next/image";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  // const { data } = await axios.get(
-  //   `${process.env.API_URL}/api/articles/${params.slug}`,
-  // );
+  const { data } = await axios.get(
+    `${process.env.API_URL}/api/articles/${params.slug}`,
+  );
 
-  const data = {
-    data: {
-      id: "1231231",
-      title: "Tips Memilih Gaun Pernikahan yang Tepat",
-      content:
-        "<p>Mencari gaun pernikahan yang sempurna adalah salah satu bagian paling penting dari persiapan pernikahan Anda. Berikut adalah beberapa tips untuk membantu Anda memilih gaun yang tepat:</p><ul><li><strong>Kenali Bentuk Tubuh Anda</strong>: Pilihlah gaun yang sesuai dengan bentuk tubuh Anda untuk memastikan gaun tersebut nyaman dan membuat Anda merasa percaya diri.</li><li><strong>Cari Inspirasi</strong>: Telusuri majalah pernikahan, situs web, dan media sosial untuk mencari inspirasi tentang gaya gaun yang Anda sukai.</li><li><strong>Pilihlah Warna yang Sesuai</strong>: Pertimbangkan warna gaun yang akan cocok dengan warna kulit Anda dan tema pernikahan Anda.</li><li><strong>Jangan Lupakan Aksesori</strong>: Perhatikan aksesori seperti veil, sepatu, dan perhiasan yang akan melengkapi penampilan Anda.</li><li><strong>Cocokkan dengan Tema Pernikahan</strong>: Pastikan gaun Anda sesuai dengan tema pernikahan Anda agar terlihat selaras dengan dekorasi dan suasana acara.</li></ul>",
-      slug: "tips-memilih-gaun-pernikahan",
-      author: "Jane Smith",
-      images: "/assets/bg1.jpg",
-    },
-  };
+  // const data = {
+  //   data: {
+  //     id: "1231231",
+  //     title: "Tips Memilih Gaun Pernikahan yang Tepat",
+  //     content:
+  //       "<p>Mencari gaun pernikahan yang sempurna adalah salah satu bagian paling penting dari persiapan pernikahan Anda. Berikut adalah beberapa tips untuk membantu Anda memilih gaun yang tepat:</p><ul><li><strong>Kenali Bentuk Tubuh Anda</strong>: Pilihlah gaun yang sesuai dengan bentuk tubuh Anda untuk memastikan gaun tersebut nyaman dan membuat Anda merasa percaya diri.</li><li><strong>Cari Inspirasi</strong>: Telusuri majalah pernikahan, situs web, dan media sosial untuk mencari inspirasi tentang gaya gaun yang Anda sukai.</li><li><strong>Pilihlah Warna yang Sesuai</strong>: Pertimbangkan warna gaun yang akan cocok dengan warna kulit Anda dan tema pernikahan Anda.</li><li><strong>Jangan Lupakan Aksesori</strong>: Perhatikan aksesori seperti veil, sepatu, dan perhiasan yang akan melengkapi penampilan Anda.</li><li><strong>Cocokkan dengan Tema Pernikahan</strong>: Pastikan gaun Anda sesuai dengan tema pernikahan Anda agar terlihat selaras dengan dekorasi dan suasana acara.</li></ul>",
+  //     slug: "tips-memilih-gaun-pernikahan",
+  //     author: "Jane Smith",
+  //     images: "/assets/bg1.jpg",
+  //   },
+  // };
 
   return (
     <Template>
@@ -52,8 +53,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                       </a>
                       <p className="font-semplicita text-base text-gray-500 dark:text-gray-400">
                         Admin |{" "}
-                        {/* {dayjs(data.data.created_at).format("MMMM DD, YYYY")} */}
-                        4 Mei, 2024
+                        {dayjs(data.data.created_at).format("MMMM DD, YYYY")}
                       </p>
                       {/* <p className="text-base text-gray-500 dark:text-gray-400"><time pubdate datetime="2022-02-08" title="February 8th, 2022">Feb. 8, 2022</time></p> */}
                     </div>
@@ -68,8 +68,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                   fill
                   alt="Images"
                   className="absolute object-cover"
-                  // src={process.env.API_URL + "/upload/" + data.data.images[0]}
-                  src={data.data.images}
+                  src={process.env.API_URL + "/api/uploads/" + data.data.images}
                 />
                 {/* <figcaption>Admin</figcaption> */}
               </figure>
@@ -118,6 +117,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </div>
         </main>
       </>
+      <CreateWedding />
     </Template>
   );
 }

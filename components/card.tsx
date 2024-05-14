@@ -11,7 +11,7 @@ type CardProps = {
   description: string;
   href: string;
   author: string;
-  // created_at: string;
+  created_at: string;
 };
 
 export default function Card({
@@ -20,7 +20,7 @@ export default function Card({
   image,
   title,
   author,
-  // created_at,
+  created_at,
 }: CardProps) {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -45,7 +45,6 @@ export default function Card({
     <article className="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow">
       <div className="relative aspect-video">
         <Image src={image} fill alt="bg" className="object-cover" />
-        {/* <Image src={image} fill alt="bg" className="object-cover" /> */}
       </div>
       <div className="flex flex-1 flex-col p-5">
         <h5 className="mb-2 truncate text-2xl font-bold tracking-tight">
@@ -53,8 +52,7 @@ export default function Card({
         </h5>
         <div className="mb-5 flex items-center justify-between font-carmorant">
           <p className="text-sm font-bold text-rose-tan">{author}</p>
-          {/* <p className="text-sm text-bold">{formattedDate(created_at)}</p> */}
-          <p className="text-sm text-bold">04 Mei, 2024</p>
+          <p className="text-sm text-bold">{formattedDate(created_at)}</p>
         </div>
         <div className="flex flex-1 flex-col ">
           <p

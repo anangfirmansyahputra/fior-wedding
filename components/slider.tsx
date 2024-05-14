@@ -26,50 +26,65 @@ export default function SliderCommponent({ data }: SliderProps) {
   }, []);
 
   return (
-    <>
-      {/* @ts-ignore */}
-      <Slider asNavFor={nav2} ref={(slider) => (sliderRef1 = slider)}>
-        {data.map((item) => (
-          <div key={item.id} className="relative aspect-video">
-            <Image
-              // src={`${process.env.NEXT_PUBLIC_API_URL}/upload/${item.filename}`}
-              src={item.filename}
-              alt="BG"
-              fill
-              className="absolute object-cover"
-            />
-            {/* <ImageSuspense
-              alt="BG"
-              src={item.filename}
-              className="absolute object-cover"
-            /> */}
-          </div>
-        ))}
-      </Slider>
-      <div>
-        {/* @ts-ignore */}
+    <div className="px-5 lg:px-0">
+      {data.length === 1 ? (
+        <div className="relative aspect-video">
+          <Image
+            src={`${process.env.NEXT_PUBLIC_API_URL}/api/uploads/${data[0].filename}`}
+            // src={item.filename}
+            alt="BG"
+            fill
+            className="absolute rounded-md object-cover"
+          />
+        </div>
+      ) : (
+        // @ts-ignore
         <Slider
-          dots
-          asNavFor={nav1}
+          slidesToShow={1}
+          asNavFor={nav2}
+          dots={false}
           // @ts-ignore
-          ref={(slider) => (sliderRef2 = slider)}
-          slidesToShow={data.length >= 6 ? 6 : data.length}
-          swipeToSlide={true}
-          focusOnSelect={true}
+          ref={(slider) => (sliderRef1 = slider)}
         >
           {data.map((item) => (
-            <Image
-              // src={`${process.env.NEXT_PUBLIC_API_URL}/upload/${item.filename}`}
-              src={item.filename}
-              alt="bg"
-              width={400}
-              height={400}
-              className="aspect-video object-cover"
-              key={item.id}
-            />
+            <div key={item.id} className="relative aspect-video">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_API_URL}/api/uploads/${item.filename}`}
+                alt="BG"
+                fill
+                className="absolute object-cover"
+              />
+            </div>
           ))}
         </Slider>
-      </div>
-    </>
+      )}
+      {data.length === 1 ? null : (
+        <div>
+          {/* @ts-ignore */}
+          <Slider
+            dots={false}
+            asNavFor={nav1}
+            // @ts-ignore
+            ref={(slider) => (sliderRef2 = slider)}
+            slidesToShow={data.length >= 6 ? 6 : data.length}
+            swipeToSlide={true}
+            focusOnSelect={true}
+          >
+            {data.map((item) => (
+              <Image
+                // src={`${process.env.NEXT_PUBLIC_API_URL}/upload/${item.filename}`}
+                // src={item.filename}
+                src={`${process.env.NEXT_PUBLIC_API_URL}/api/uploads/${item.filename}`}
+                alt="bg"
+                width={400}
+                height={400}
+                className="aspect-video object-cover"
+                key={item.id}
+              />
+            ))}
+          </Slider>
+        </div>
+      )}
+    </div>
   );
 }

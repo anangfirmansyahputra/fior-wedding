@@ -83,7 +83,7 @@ export default function Testimonial() {
   return (
     <div className="relative bg-neutral-background">
       <div className="container relative mx-auto space-y-10 py-20 md:py-48">
-        <h2 className="text-center text-2xl font-bold tracking-wider text-bold md:text-3xl lg:text-4xl">
+        <h2 className="text-center text-3xl font-bold tracking-wider text-bold">
           TESTIMONIALS
         </h2>
 

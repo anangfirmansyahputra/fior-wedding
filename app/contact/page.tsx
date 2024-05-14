@@ -1,4 +1,5 @@
 import Contact from "@/components/contact";
+import CreateWedding from "@/components/create-wedding";
 import Template from "@/components/template";
 import React from "react";
 

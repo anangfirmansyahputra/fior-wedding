@@ -39,7 +39,7 @@ export default function Services() {
 
   return (
     <>
-      <div className="bg-[url('/assets/pattern.png')]">
+      <section className="bg-[url('/assets/pattern.png')]">
         <div className="container mx-auto space-y-10 py-20 lg:py-48">
           <div className="space-y-5">
             <h1 className="text-center text-2xl font-medium tracking-widest text-white md:text-3xl lg:text-4xl">
@@ -100,7 +100,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <Package />
     </>
   );
