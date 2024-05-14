@@ -50,7 +50,7 @@ export default async function Portfolio({ data }: PropsPortfolio) {
         <div>
           <h2
             className={cn(
-              "py-20 text-center text-4xl font-medium",
+              "mb-10 text-center text-3xl font-bold text-[#656565] ",
               portfolios.data.length > 0 && "mt-10",
             )}
           >

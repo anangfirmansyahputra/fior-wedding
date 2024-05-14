@@ -10,7 +10,6 @@ type SliderProps = {
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
-import ImageSuspense from "./image-suspense";
 
 export default function SliderCommponent({ data }: SliderProps) {
   const [nav1, setNav1] = useState(null);
@@ -25,13 +24,24 @@ export default function SliderCommponent({ data }: SliderProps) {
     setNav2(sliderRef2);
   }, []);
 
+  const sliderSettingLg = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div className="px-5 lg:px-0">
+      <h2 className="mb-10 text-center text-3xl font-bold text-[#656565] ">
+        GALLERY
+      </h2>
+
       {data.length === 1 ? (
         <div className="relative aspect-video">
           <Image
             src={`${process.env.NEXT_PUBLIC_API_URL}/api/uploads/${data[0].filename}`}
-            // src={item.filename}
             alt="BG"
             fill
             className="absolute rounded-md object-cover"
@@ -40,9 +50,8 @@ export default function SliderCommponent({ data }: SliderProps) {
       ) : (
         // @ts-ignore
         <Slider
-          slidesToShow={1}
+          {...sliderSettingLg}
           asNavFor={nav2}
-          dots={false}
           // @ts-ignore
           ref={(slider) => (sliderRef1 = slider)}
         >
@@ -59,10 +68,9 @@ export default function SliderCommponent({ data }: SliderProps) {
         </Slider>
       )}
       {data.length === 1 ? null : (
-        <div>
+        <div className="hidden sm:block">
           {/* @ts-ignore */}
           <Slider
-            dots={false}
             asNavFor={nav1}
             // @ts-ignore
             ref={(slider) => (sliderRef2 = slider)}
