@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     "portofolio, fior wedding organizer, contoh pernikahan, galeri pernikahan, karya wedding planner",
 };
 
+export const revalidate = 60;
+
 export default async function Page() {
   const { data } = await axios.get(`${process.env.API_URL}/api/articles`);
 
