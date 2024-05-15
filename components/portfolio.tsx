@@ -3,7 +3,7 @@ type PropsPortfolio = {
     id: string;
     title: string;
     author: string;
-    images: string;
+    image: string;
     content: string;
     slug: string;
     created_at: string;
@@ -43,7 +43,7 @@ export default async function Portfolio({ data }: PropsPortfolio) {
                 key={item.id}
                 description={item.content}
                 href={`/portfolio/${item.slug}`}
-                image={process.env.API_URL + "/api/uploads/" + item.images}
+                image={process.env.API_URL + "/api/uploads/" + item.image}
                 // image={item.images}
                 title={item.title}
                 author={item.author}

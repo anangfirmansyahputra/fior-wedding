@@ -4,9 +4,30 @@ import { Button } from "@/components/ui/button";
 import axios from "axios";
 import dayjs from "dayjs";
 import { FacebookIcon, Instagram, Share2Icon, Twitter } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 
-export default async function Page({ params }: { params: { slug: string } }) {
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const { data } = await axios.get(
+    `${process.env.API_URL}/api/articles/${params.slug}`,
+  );
+
+  return {
+    title: data.data.title,
+    description: data.data.meta_description,
+    keywords: data.data.keyword,
+  };
+};
+
+export default async function Page({ params }: Props) {
   const { data } = await axios.get(
     `${process.env.API_URL}/api/articles/${params.slug}`,
   );
@@ -50,7 +71,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                   fill
                   alt="Images"
                   className="absolute object-cover"
-                  src={process.env.API_URL + "/api/uploads/" + data.data.images}
+                  src={process.env.API_URL + "/api/uploads/" + data.data.image}
                 />
                 {/* <figcaption>Admin</figcaption> */}
               </figure>
@@ -63,38 +84,17 @@ export default async function Page({ params }: { params: { slug: string } }) {
               ></div>
 
               <div className="mt-10 grid grid-cols-2 gap-2">
-                <div className="relative aspect-square">
-                  <Image
-                    fill
-                    className="absolute h-auto max-w-full rounded-lg object-cover"
-                    src="/assets/bg1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="relative aspect-square">
-                  <Image
-                    fill
-                    className="absolute h-auto max-w-full rounded-lg object-cover"
-                    src="/assets/bg2.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="relative aspect-square">
-                  <Image
-                    fill
-                    className="absolute h-auto max-w-full rounded-lg object-cover"
-                    src="/assets/bg3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="relative aspect-square">
-                  <Image
-                    fill
-                    className="absolute h-auto max-w-full rounded-lg object-cover"
-                    src="/assets/bg4.jpg"
-                    alt=""
-                  />
-                </div>
+                {data.data.galleries.map((gallery: any, i: number) => (
+                  <div key={i} className="relative aspect-square">
+                    <Image
+                      fill
+                      className="absolute h-auto max-w-full rounded-lg object-cover"
+                      // src="/assets/bg1.jpg"
+                      src={process.env.API_URL + "/api/uploads/" + gallery}
+                      alt=""
+                    />
+                  </div>
+                ))}
               </div>
 
               <hr className="my-5" />
