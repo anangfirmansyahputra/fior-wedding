@@ -1,9 +1,10 @@
+import ArticleGalleries from "@/components/article-galleries";
 import CreateWedding from "@/components/create-wedding";
+import ShareButton from "@/components/share-button";
 import Template from "@/components/template";
-import { Button } from "@/components/ui/button";
 import axios from "axios";
 import dayjs from "dayjs";
-import { FacebookIcon, Instagram, Share2Icon, Twitter } from "lucide-react";
+
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -83,53 +84,12 @@ export default async function Page({ params }: Props) {
                 }}
               ></div>
 
-              <div className="mt-10 grid grid-cols-2 gap-2">
-                {data.data.galleries.map((gallery: any, i: number) => (
-                  <div key={i} className="relative aspect-square">
-                    <Image
-                      fill
-                      className="absolute h-auto max-w-full rounded-lg object-cover"
-                      // src="/assets/bg1.jpg"
-                      src={process.env.API_URL + "/api/uploads/" + gallery}
-                      alt=""
-                    />
-                  </div>
-                ))}
-              </div>
+              <ArticleGalleries data={data} />
 
               <hr className="my-5" />
               <div className="flex items-center space-x-5">
                 <div className="font-bold text-rose-tan">Share :</div>
-                <div className="space-x-2">
-                  <Button
-                    variant="secondary"
-                    size="icon"
-                    className="rounded-full"
-                  >
-                    <FacebookIcon />
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="icon"
-                    className="rounded-full"
-                  >
-                    <Twitter />
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="icon"
-                    className="rounded-full"
-                  >
-                    <Instagram />
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="icon"
-                    className="rounded-full"
-                  >
-                    <Share2Icon />
-                  </Button>
-                </div>
+                <ShareButton title={data.data.title} />
               </div>
             </article>
           </div>
