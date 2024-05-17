@@ -13,9 +13,14 @@ export default function Hero() {
         <h1 className="text-center text-2xl font-bold uppercase  text-[#fff] md:text-3xl xl:text-5xl">
           Memorable Moments Through Genuine Hearts
         </h1>
-        <p className="text-center text-base font-light tracking-[0.3rem] text-white md:text-lg lg:text-xl xl:text-2xl">
-          Authentic Hearts Create Cherished Moments
-        </p>
+        <div className="text-center">
+          <p className="font-semplicita text-base font-light tracking-[0.3rem] text-white md:text-lg lg:text-xl xl:text-2xl">
+            JAKARTA & BALI BASED
+          </p>
+          <p className="font-semplicita text-base font-light tracking-[0.3rem] text-white md:text-lg lg:text-xl xl:text-2xl">
+            EST. 2015
+          </p>
+        </div>
         <div className="grid w-full gap-5 sm:grid-cols-2 md:w-[600px]">
           <Button
             onClick={() => router.push("/contact")}

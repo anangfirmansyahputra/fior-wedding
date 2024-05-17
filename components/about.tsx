@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <div className="bg-neutral-background">
-        <div className="container mx-auto space-y-10 py-32">
+        <div className="container mx-auto space-y-10 py-10 md:py-32">
           <div>
             <div className="grid gap-x-10 gap-y-10 md:grid-cols-2">
               <div className="space-y-4">

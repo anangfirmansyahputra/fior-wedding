@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
 import Slider from "react-slick";
-import Package from "./package";
-import Testimonial from "./testimonial";
+import NewPackage from "./new-package";
 
 export default function Services() {
   const services = [
@@ -12,7 +10,7 @@ export default function Services() {
       id: 1,
       title: "WEDDING PLANNER",
       description:
-        "Include On The Day Organizer. From A to Z details and stuff. Stress-Free!",
+        "Wedding Organizer included, Full Day Assistance up to 18 hours",
     },
     {
       id: 2,
@@ -21,7 +19,7 @@ export default function Services() {
     },
     {
       id: 3,
-      title: "ONE STOP PACKAGE / CUSTOM PACKAGE",
+      title: "ALL IN PACKAGE / CUSTOM PACKAGE",
       description: "All In Package with venue and all the vendors included",
     },
   ];
@@ -101,7 +99,8 @@ export default function Services() {
           </div>
         </div>
       </section>
-      <Package />
+      {/* <Package /> */}
+      <NewPackage />
     </>
   );
 }

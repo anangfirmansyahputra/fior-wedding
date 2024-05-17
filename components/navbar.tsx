@@ -15,6 +15,7 @@ import {
 import NavbarMobile from "./navbar-mobile";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function Navbar() {
   const path = usePathname();
@@ -92,12 +93,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="mx-10">
-            <h1 className="text-center font-semplicita text-3xl font-semibold tracking-[0.8rem] lg:text-4xl xl:text-5xl">
-              FIOR
-            </h1>
-            <p className="mr-0 text-end font-semplicita text-[5px] font-light leading-[1rem] tracking-[0.2rem] md:mr-2 xl:text-[7px]">
-              EVENT SPECIALIST
-            </p>
+            <Image src="/logo.png" alt="Logo" width={180} height={180} />
           </div>
           <div className="hidden flex-1 items-center space-x-10 md:flex">
             <Link

@@ -78,7 +78,7 @@ export default function Package() {
         <h2 className="text-center text-2xl font-bold tracking-wider text-bold md:text-3xl lg:text-4xl">
           PACKAGE INCLUSION
         </h2>
-        <div className="grid gap-5 font-semplicita tracking-wider md:grid-cols-2 md:gap-10 lg:grid-cols-3">
+        {/* <div className="grid gap-5 font-semplicita tracking-wider md:grid-cols-2 md:gap-10 lg:grid-cols-3">
           <div className="space-y-5 rounded-md bg-neutral-background p-5 shadow-md lg:p-10">
             <div className="space-y-5">
               <h4 className="text-lg font-medium text-rose-tan lg:text-2xl">
@@ -217,6 +217,26 @@ export default function Package() {
                     {it}
                   </li>
                 ))}
+              </ul>
+            </div>
+          </div>
+        </div> */}
+        <div className="grid grid-cols-3">
+          <div>
+            <h4>WEDDING PLANNER SERVICES</h4>
+            <p>JAKARTA WEDDING : 10 CREWS ON THE DAY</p>
+            <p>BALI WEDDING : 8 CREWS ON THE DAY</p>
+            <div>
+              <p>Scope of Work : </p>
+              <p>Wedding Organizer included</p>
+              <p>Full Day Assistance up to 18 hours</p>
+              <ul>
+                <li>Venue inspection</li>
+                <li>Fitting schedule arrangement</li>
+                <li>Food Tasting</li>
+                <li>Technical Meeting 1x</li>
+                <li>Budgeting Sheet</li>
+                <li>Wedding Checklist</li>
               </ul>
             </div>
           </div>
