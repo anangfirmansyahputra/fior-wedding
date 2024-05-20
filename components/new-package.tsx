@@ -11,14 +11,14 @@ export default function NewPackage() {
         <div className="relative z-[1] mt-20 grid gap-5 sm:grid-cols-2">
           <div className="space-y-5">
             <div className="space-y-2 overflow-hidden rounded-lg bg-white shadow-lg">
-              <h4 className="bg-sea-salt p-5 text-center font-semplicita font-semibold tracking-wider text-[#555] md:text-2xl">
+              <h4 className="bg-sea-salt p-5 text-center font-carmorant font-semibold tracking-wider text-[#555] md:text-2xl">
                 WEDDING PLANNER SERVICES
               </h4>
               <div className="px-5">
-                <p className="font-semplicita text-sm italic text-[#555] md:text-lg">
+                <p className="font-carmorant text-sm text-[#555] md:text-lg">
                   JAKARTA WEDDING : 10 CREWS ON THE DAY
                 </p>
-                <p className="font-semplicita text-sm italic text-[#555] md:text-lg">
+                <p className="font-carmorant text-sm text-[#555] md:text-lg">
                   BALI WEDDING : 8 CREWS ON THE DAY
                 </p>
               </div>
@@ -38,14 +38,14 @@ export default function NewPackage() {
               </div>
             </div>
             <div className="space-y-2 overflow-hidden rounded-lg bg-white shadow-lg">
-              <h4 className="bg-sea-salt p-5 text-center font-semplicita font-semibold tracking-wider text-[#555] md:text-2xl">
+              <h4 className="bg-sea-salt p-5 text-center font-carmorant font-semibold tracking-wider text-[#555] md:text-2xl">
                 WEDDING ORGANIZER SERVICES
               </h4>
               <div className="px-5">
-                <p className="font-semplicita text-sm italic text-[#555] md:text-lg">
+                <p className="font-carmorant text-sm text-[#555] md:text-lg">
                   JAKARTA WEDDING : 10 CREWS ON THE DAY
                 </p>
-                <p className="font-semplicita text-sm italic text-[#555] md:text-lg">
+                <p className="font-carmorant text-sm text-[#555] md:text-lg">
                   NOT APPLICABLE FOR BALI WEDDING
                 </p>
               </div>
@@ -67,11 +67,11 @@ export default function NewPackage() {
           </div>
 
           <div className="space-y-2 overflow-hidden rounded-lg bg-white shadow-lg">
-            <h4 className="bg-sea-salt p-5 text-center font-semplicita font-semibold tracking-wider text-[#555] md:text-2xl">
+            <h4 className="bg-sea-salt p-5 text-center font-carmorant font-semibold tracking-wider text-[#555] md:text-2xl">
               ALL IN PACKAGES
             </h4>
             <div>
-              <p className="px-5 font-semplicita text-sm italic text-[#555] md:text-lg">
+              <p className="px-5 font-carmorant text-sm text-[#555] md:text-lg">
                 PACKAGE INCLUSION
               </p>
             </div>
