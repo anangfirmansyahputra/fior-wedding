@@ -161,9 +161,9 @@ oleng" - Raja Lapangan`}</p>
 
       <div className="bg-sea-salt py-20">
         <div className="container mx-auto text-center">
-          <h2 className="mb-10 text-5xl font-bold text-gray-800">
-            Get to Know Us
-          </h2>
+          <h1 className="mb-5 text-2xl font-bold tracking-widest text-gray-800 md:text-3xl lg:text-4xl">
+            GET TO KNOW US
+          </h1>
           <p className="mx-auto mb-16 max-w-3xl text-lg text-gray-600">
             We are a team of passionate professionals dedicated to making your
             events unforgettable. Our expertise in planning and execution
