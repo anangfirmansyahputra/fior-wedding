@@ -9,12 +9,12 @@ export default function SectionWelcome() {
 
   return (
     <div className="relative">
-      <Image
+      {/* <Image
         src={"/assets/border2.png"}
         fill
         alt="Border"
         className="absolute z-[0] object-cover"
-      />
+      /> */}
 
       <div className="container relative mx-auto grid pb-36 pt-28 md:grid-cols-2 lg:pb-72 lg:pt-36">
         <div className="flex flex-col items-start justify-center space-y-5">
