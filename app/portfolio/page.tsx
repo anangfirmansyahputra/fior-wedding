@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function Page() {
-  const { data } = await axios.get(`${process.env.API_URL}/api/articles`);
+  const { data } = await axios.get(`${process.env.API_URL}/api/articles-fior`);
 
   return (
     <Template>
