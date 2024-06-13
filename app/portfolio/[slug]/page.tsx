@@ -1,11 +1,10 @@
-import ArticleGalleries from "@/components/article-galleries";
 import CreateWedding from "@/components/create-wedding";
 import ShareButton from "@/components/share-button";
 import Template from "@/components/template";
 import axios from "axios";
 import dayjs from "dayjs";
-import root from 'react-shadow'
 
+import ShadowContent from "@/components/shadow-component";
 import { Metadata } from "next";
 import Image from "next/image";
 import { redirect } from "next/navigation";
@@ -85,12 +84,14 @@ export default async function Page({ params }: Props) {
                   {/* <figcaption>Admin</figcaption> */}
                 </figure>
   
-                <div
+
+                {/* <div
                   className="mt-5 space-y-10"
                   dangerouslySetInnerHTML={{
                     __html: data.data.content,
                   }}
-                ></div>
+                ></div> */}
+                <ShadowContent htmlContent={data.data.content} />
 
   
                 {/* <ArticleGalleries data={data} /> */}
