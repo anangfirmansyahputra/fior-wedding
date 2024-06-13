@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: "http",
         hostname: "localhost",
       },
+      {
+        protocol: "http",
+        hostname: "bfior.yukmilih.com",
+      },
     ],
   },
 };

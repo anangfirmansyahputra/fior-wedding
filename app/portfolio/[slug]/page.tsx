@@ -4,6 +4,7 @@ import ShareButton from "@/components/share-button";
 import Template from "@/components/template";
 import axios from "axios";
 import dayjs from "dayjs";
+import root from 'react-shadow'
 
 import { Metadata } from "next";
 import Image from "next/image";
@@ -35,6 +36,10 @@ export default async function Page({ params }: Props) {
       `${process.env.API_URL}/api/articles/${params.slug}`,
     );
 
+    const resetStyles = {
+      all: 'unset',
+      display: 'block',
+    };
     
     return (
       <Template>
@@ -86,6 +91,7 @@ export default async function Page({ params }: Props) {
                     __html: data.data.content,
                   }}
                 ></div>
+
   
                 {/* <ArticleGalleries data={data} /> */}
   
