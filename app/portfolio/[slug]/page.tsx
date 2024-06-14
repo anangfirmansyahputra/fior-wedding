@@ -85,13 +85,13 @@ export default async function Page({ params }: Props) {
                 </figure>
   
 
-                {/* <div
-                  className="mt-5 space-y-10"
+                <div
+                  className="shadow-dom"
                   dangerouslySetInnerHTML={{
                     __html: data.data.content,
                   }}
-                ></div> */}
-                <ShadowContent htmlContent={data.data.content} />
+                ></div>
+                {/* <ShadowContent htmlContent={data.data.content} /> */}
 
   
                 {/* <ArticleGalleries data={data} /> */}

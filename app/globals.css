@@ -159,3 +159,15 @@
 .slick-next:before {
   color: #000 !important;
 }
+
+.shadow-dom h1,
+.shadow-dom h2,
+.shadow-dom h3,
+.shadow-dom h4,
+.shadow-dom h5,
+.shadow-dom h6 {
+  font-size: revert;
+  font-weight: revert;
+  box-sizing: border-box;
+  margin: 0;
+}

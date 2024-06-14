@@ -14,12 +14,15 @@ export const metadata: Metadata = {
 
 export const revalidate = 60;
 
-export default async function Page() {
-  const { data } = await axios.get(`${process.env.API_URL}/api/articles-fior`);
+export default async function Page({ searchParams }: { searchParams: any }) {
+  const { page } = searchParams;
+  const { data } = await axios.get(
+    `${process.env.API_URL}/api/articles-fior${page && "?page=" + page}`,
+  );
 
   return (
     <Template>
-      <Portfolio data={data.data} />
+      <Portfolio page={page} data={data.data} next={data.page_info.next} />
       <CreateWedding />
     </Template>
   );

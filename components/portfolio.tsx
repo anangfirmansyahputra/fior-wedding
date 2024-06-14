@@ -1,3 +1,5 @@
+"use client";
+
 type PropsPortfolio = {
   data: {
     id: string;
@@ -8,31 +10,25 @@ type PropsPortfolio = {
     slug: string;
     created_at: string;
   }[];
+  next: boolean;
+  page: string;
 };
 
 import { cn } from "@/lib/utils";
-import axios from "axios";
 import Card from "./card";
-import SliderCommponent from "./slider";
+import { useRouter } from "next/navigation";
 
-export default async function Portfolio({ data }: PropsPortfolio) {
-  const { data: portfolios } = await axios.get(
-    `${process.env.API_URL}/api/galleries`,
-  );
+export default function Portfolio({ data, next, page }: PropsPortfolio) {
+  const router = useRouter();
 
   return (
     <div className="bg-neutral-background py-20">
       <div className="container mx-auto">
-        {portfolios.data.length === 0 ? null : (
-          <SliderCommponent data={portfolios.data} />
-        )}
-
         {/* Article */}
         <div>
           <h2
             className={cn(
               "mb-10 text-center text-3xl font-bold text-[#656565] ",
-              portfolios.data.length > 0 && "mt-10",
             )}
           >
             ARTICLE
@@ -43,7 +39,9 @@ export default async function Portfolio({ data }: PropsPortfolio) {
                 key={item.id}
                 description={item.content}
                 href={`/portfolio/${item.slug}`}
-                image={process.env.API_URL + "/api/uploads/" + item.image}
+                image={
+                  process.env.NEXT_PUBLIC_API_URL + "/api/uploads/" + item.image
+                }
                 // image={item.images}
                 title={item.title}
                 author={item.author}
@@ -52,6 +50,24 @@ export default async function Portfolio({ data }: PropsPortfolio) {
             ))}
           </div>
         </div>
+
+        {next && (
+          <div className="mx-auto mt-20 flex items-center justify-center">
+            <button
+              onClick={() => {
+                const newPage = Number(page) + 1;
+
+                router.replace(`/portfolio?page=${newPage}`, {
+                  scroll: false,
+                });
+                router.refresh();
+              }}
+              className="rounded bg-peach-whip px-10 py-2 text-white transition-all duration-150 hover:bg-rose-tan"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
