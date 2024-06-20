@@ -17,7 +17,7 @@ export const revalidate = 60;
 export default async function Page({ searchParams }: { searchParams: any }) {
   const { page } = searchParams;
   const { data } = await axios.get(
-    `${process.env.API_URL}/api/articles-fior${page && "?page=" + page}`,
+    `${process.env.API_URL}/api/articles-fior${page ? "?page=" + page : ""}`,
   );
 
   return (
