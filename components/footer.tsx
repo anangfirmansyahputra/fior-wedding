@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
+
   return (
     <footer className="bg-custom-footer font-semplicita">
       <div className="container mx-auto p-4 px-10 py-6 md:px-10 md:py-20 2xl:px-0">
@@ -17,13 +20,16 @@ export default function Footer() {
                 className="absolute w-full"
               />
             </div>
-            <p className="font-amiri w-full max-w-[370px] leading-[35px] text-[#2B2B2B]">
+            <p className="font-amiri w-full max-w-[280px] leading-[35px] text-[#2B2B2B] xl:max-w-[370px]">
               Every wedding is unique. We offer personalized planning tailored
               to your vision and preferences to ensure your day is exactly as
               you imagined.
             </p>
             <div className="text-[#2B2B2B]">
-              <div className="flex cursor-pointer gap-[5px]">
+              <div
+                className="flex cursor-pointer gap-[5px] transition-all hover:underline"
+                onClick={() => router.push("/contact")}
+              >
                 <Image
                   src="/assets/revision/ic_baseline-whatsapp.svg"
                   alt=""
@@ -32,7 +38,14 @@ export default function Footer() {
                 />
                 <span className="font-amiri">Inquiry Form</span>
               </div>
-              <div className="mt-[10px] flex gap-[5px]">
+              <div
+                className="mt-[10px] flex cursor-pointer gap-[5px] transition-all hover:underline"
+                onClick={() =>
+                  router.push(
+                    "https://api.whatsapp.com/send/?phone=6287876996092&text&type=phone_number&app_absent=0",
+                  )
+                }
+              >
                 <Image
                   src="/assets/revision/ic_baseline-whatsapp (1).svg"
                   alt=""
@@ -46,7 +59,12 @@ export default function Footer() {
 
           <div className="space-y-10 lg:mr-20">
             <p className="whitespace-nowrap text-center font-semplicita text-2xl font-semibold tracking-widest text-font">
-              FIOR FOUNDER
+              FIOR
+            </p>
+            <p className="font-amiri mx-auto block w-full max-w-[370px] text-center leading-[35px] text-[#2B2B2B] lg:hidden">
+              Every wedding is unique. We offer personalized planning tailored
+              to your vision and preferences to ensure your day is exactly as
+              you imagined.
             </p>
             <div className="flex items-center  justify-center gap-5">
               <div className="flex flex-col items-center space-y-5 ">

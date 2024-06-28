@@ -60,7 +60,7 @@
 
 @font-face {
   font-family: 'Amiri';
-  src: url('/Amiri/Amiri-Regular') format('opentype');
+  src: url('/Amiri/Amiri-Regular.ttf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }

@@ -208,125 +208,33 @@ export default function Testimonial() {
           </Slider>
         </div>
 
-        <div className="mx-auto hidden h-fit px-5 md:block lg:hidden">
+        <div className="mx-auto hidden px-5 md:block lg:hidden">
           <Slider {...settingsMd} className="mt-20">
             {testimonials.map((testimonial) => {
               const star = Array(testimonial.star).fill(true);
               const unstar = Array(5 - testimonial.star).fill(true);
 
               return (
-                <div
+                <TestimonialCard
                   key={testimonial.id}
-                  className="mb-5 h-fit rounded-sm bg-white p-5 shadow"
-                >
-                  <h5 className="font-semplicita font-semibold">
-                    {testimonial.strong}
-                  </h5>
-                  <div
-                    className="mt-5 space-y-3 text-sm"
-                    dangerouslySetInnerHTML={{
-                      __html: testimonial.text,
-                    }}
-                  />
-                  <div className="mt-3 flex items-center space-x-5">
-                    <Image
-                      src={testimonial.image}
-                      width={30}
-                      height={30}
-                      alt={testimonial.name}
-                      className="rounded-full"
-                    />
-                    <div>
-                      <div>
-                        <p className="font-medium text-rose-tan">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-xs text-slate-600">
-                          {testimonial.as}
-                        </p>
-                      </div>
-                      <p className="mt-1 text-xs">{testimonial.created_at}</p>
-                    </div>
-                  </div>
-                  <div className="mt-3 flex w-full justify-end">
-                    {unstar.map((s, i) => (
-                      <Star
-                        key={i}
-                        className="fill-white text-slate-300"
-                        size={20}
-                      />
-                    ))}
-                    {star.map((s, i) => (
-                      <Star
-                        key={i}
-                        className="fill-yellow-300 text-yellow-300"
-                        size={20}
-                      />
-                    ))}
-                  </div>
-                </div>
+                  testimonial={testimonial}
+                />
               );
             })}
           </Slider>
         </div>
 
-        <div className="mx-auto block h-fit px-5 md:hidden">
+        <div className="mx-auto block px-5 md:hidden">
           <Slider {...settingsSm} className="mt-20">
             {testimonials.map((testimonial) => {
               const star = Array(testimonial.star).fill(true);
               const unstar = Array(5 - testimonial.star).fill(true);
 
               return (
-                <div
+                <TestimonialCard
                   key={testimonial.id}
-                  className="mb-5 h-fit rounded-sm bg-white p-5 shadow"
-                >
-                  <h5 className="font-semplicita font-semibold">
-                    {testimonial.strong}
-                  </h5>
-                  <div
-                    className="mt-5 space-y-3 text-sm"
-                    dangerouslySetInnerHTML={{
-                      __html: testimonial.text,
-                    }}
-                  />
-                  <div className="mt-3 flex items-center space-x-5">
-                    <Image
-                      src={testimonial.image}
-                      width={30}
-                      height={30}
-                      alt={testimonial.name}
-                      className="rounded-full"
-                    />
-                    <div>
-                      <div>
-                        <p className="font-medium text-rose-tan">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-xs text-slate-600">
-                          {testimonial.as}
-                        </p>
-                      </div>
-                      <p className="mt-1 text-xs">{testimonial.created_at}</p>
-                    </div>
-                  </div>
-                  <div className="mt-3 flex w-full justify-end">
-                    {unstar.map((s, i) => (
-                      <Star
-                        key={i}
-                        className="fill-white text-slate-300"
-                        size={20}
-                      />
-                    ))}
-                    {star.map((s, i) => (
-                      <Star
-                        key={i}
-                        className="fill-yellow-300 text-yellow-300"
-                        size={20}
-                      />
-                    ))}
-                  </div>
-                </div>
+                  testimonial={testimonial}
+                />
               );
             })}
           </Slider>
