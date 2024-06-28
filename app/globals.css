@@ -44,14 +44,6 @@
   font-style: normal;
 }
 
-/* @font-face {
-    font-family: 'Semplicita';
-    src: url('/Semplicita/Semplicita Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-  } */
-
-
 @font-face {
   font-family: 'Semplicita';
   src: url('/Semplicita/Semplicita Medium.otf') format('opentype');
@@ -66,6 +58,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Amiri';
+  src: url('/Amiri/Amiri-Regular') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;0,600&display=swap');
 
 @layer base {
   :root {
@@ -170,4 +172,46 @@
   font-weight: revert;
   box-sizing: border-box;
   margin: 0;
+}
+
+.bg-custom-welcome {
+  background: linear-gradient(360deg, #FFFFFF 48.81%, rgba(219, 190, 184, 0.5) 89.49%, rgba(209, 199, 190, 0.8) 98.1%);
+}
+
+.spectral-regular {
+  font-family: "Spectral", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cardo-bold {
+  font-family: "Cardo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cardo-regular {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg-testimonial {
+  background: linear-gradient(0deg, #D1C7BE -15.59%, rgba(219, 190, 184, 0.5) 18.61%, #FFFFFF 100%);
+}
+
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.bg-custom-footer {
+  background: linear-gradient(360deg, #DBBEB8 -26.52%, #E8E3DD 61.7%, #FFFFFF 100%);
 }

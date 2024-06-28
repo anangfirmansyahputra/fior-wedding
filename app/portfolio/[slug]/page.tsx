@@ -22,10 +22,25 @@ export const generateMetadata = async ({
     `${process.env.API_URL}/api/articles/${params.slug}`,
   );
 
+  console.log(data);
+
   return {
     title: data.data.title,
     description: data.data.meta_description,
     keywords: data.data.keyword,
+    openGraph: {
+      title: data.data.title,
+      description: data.data.meta_description,
+      images: [
+        {
+          url: `${process.env.API_URL}/api/uploads/${data.data.image}`,
+          width: 800,
+          height: 600,
+          alt: data.data.title,
+        },
+      ],
+      url: `${process.env.API_URL}/api/articles/${params.slug}`,
+    },
   };
 };
 
@@ -36,10 +51,10 @@ export default async function Page({ params }: Props) {
     );
 
     const resetStyles = {
-      all: 'unset',
-      display: 'block',
+      all: "unset",
+      display: "block",
     };
-    
+
     return (
       <Template>
         <>
@@ -79,11 +94,12 @@ export default async function Page({ params }: Props) {
                     fill
                     alt="Images"
                     className="absolute object-cover"
-                    src={process.env.API_URL + "/api/uploads/" + data.data.image}
+                    src={
+                      process.env.API_URL + "/api/uploads/" + data.data.image
+                    }
                   />
                   {/* <figcaption>Admin</figcaption> */}
                 </figure>
-  
 
                 <div
                   className="shadow-dom"
@@ -93,9 +109,8 @@ export default async function Page({ params }: Props) {
                 ></div>
                 {/* <ShadowContent htmlContent={data.data.content} /> */}
 
-  
                 {/* <ArticleGalleries data={data} /> */}
-  
+
                 <hr className="my-5" />
                 <div className="flex items-center space-x-5">
                   <div className="font-bold text-rose-tan">Share :</div>
@@ -109,7 +124,6 @@ export default async function Page({ params }: Props) {
       </Template>
     );
   } catch (err) {
-    return redirect("/portfolio")
+    return redirect("/portfolio");
   }
-  
 }

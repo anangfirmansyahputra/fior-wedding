@@ -3,15 +3,17 @@
 import { Star } from "lucide-react";
 import Image from "next/image";
 import Slider from "react-slick";
+import TestimonialCard from "./testimonial-card";
 
 export default function Testimonial() {
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
+    arrows: false,
   };
 
   const settingsMd = {
@@ -180,69 +182,27 @@ export default function Testimonial() {
   ];
 
   return (
-    <div className="relative bg-neutral-background">
+    <div className="bg-testimonial relative">
       <div className="container relative mx-auto space-y-10 pb-10 md:py-48">
-        <h2 className="text-center text-3xl font-bold tracking-wider text-bold">
-          TESTIMONIALS
-        </h2>
+        <div className="mx-auto w-fit space-y-3">
+          <h2 className="carmorant-garamond-bold text-center text-3xl font-bold tracking-wider text-bold">
+            Testimonials
+          </h2>
+          <div className="mx-auto h-[3px] w-[70%] bg-[#DBBEB8]" />
+        </div>
 
-        <div className="mx-auto hidden h-fit lg:block">
+        <p className="font-amiri text-center text-[20px] font-normal leading-[35px] tracking-wide text-[#2B2B2B]">
+          What our client says about FIOR Wedding Organizer
+        </p>
+
+        <div className="mx-auto hidden lg:block">
           <Slider {...settings} className="mt-20">
             {testimonials.map((testimonial) => {
-              const star = Array(testimonial.star).fill(true);
-              const unstar = Array(5 - testimonial.star).fill(true);
-
               return (
-                <div
+                <TestimonialCard
                   key={testimonial.id}
-                  className="mb-5 h-fit rounded-sm bg-white p-5 shadow"
-                >
-                  <h5 className="font-semplicita font-semibold">
-                    {testimonial.strong}
-                  </h5>
-                  <div
-                    className="mt-5 space-y-3 text-sm"
-                    dangerouslySetInnerHTML={{
-                      __html: testimonial.text,
-                    }}
-                  />
-                  <div className="mt-3 flex items-center space-x-5">
-                    <Image
-                      src={testimonial.image}
-                      width={30}
-                      height={30}
-                      alt={testimonial.name}
-                      className="rounded-full"
-                    />
-                    <div>
-                      <div>
-                        <p className="font-medium text-rose-tan">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-xs text-slate-600">
-                          {testimonial.as}
-                        </p>
-                      </div>
-                      <p className="mt-1 text-xs">{testimonial.created_at}</p>
-                    </div>
-                  </div>
-                  <div className="mt-3 flex w-full justify-end">
-                    {unstar.map((s, i) => (
-                      <Star
-                        key={i}
-                        className="fill-white text-slate-300"
-                        size={20}
-                      />
-                    ))}
-                    {star.map((s, i) => (
-                      <Star
-                        key={i}
-                        className="fill-yellow-300 text-yellow-300"
-                        size={20}
-                      />
-                    ))}
-                  </div>
-                </div>
+                  testimonial={testimonial}
+                />
               );
             })}
           </Slider>

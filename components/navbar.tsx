@@ -68,20 +68,20 @@ export default function Navbar() {
           "font-carmorant transition-all duration-500",
           scroll
             ? "border-b border-border/40 bg-background/95 bg-white backdrop-blur supports-[backdrop-filter]:bg-background/60"
-            : "bg-neutral-background ",
+            : "bg-[#F2EEEE] ",
         )}
       >
         <div className=" container mx-auto flex h-[80px] items-center justify-center md:flex md:grid-cols-3 lg:h-[80px] xl:h-[100px]">
-          <div className="flex flex-1 items-center justify-end space-x-10">
+          <div className="flex flex-1 items-center justify-end">
             <Link
               href={"/"}
-              className={`hidden text-sm text-font transition-all hover:text-rose-tan md:block lg:text-base ${path === "/" && "text-rose-tan"}`}
+              className={`hidden pr-16 text-sm text-font transition-all hover:text-rose-tan md:block lg:text-base ${path === "/" && "text-rose-tan"}`}
             >
               HOME
             </Link>
             <Link
               href="/about"
-              className={`hidden text-sm text-font transition-all hover:text-rose-tan md:block lg:text-base ${path === "/about" && "text-rose-tan"}`}
+              className={`hidden pr-16 text-sm text-font transition-all hover:text-rose-tan md:block lg:text-base ${path === "/about" && "text-rose-tan"}`}
             >
               ABOUT
             </Link>
@@ -92,19 +92,19 @@ export default function Navbar() {
               SERVICE
             </Link>
           </div>
-          <div className="mx-10">
+          <div className="mx-16">
             <Image src="/logo.png" alt="Logo" width={180} height={180} />
           </div>
-          <div className="hidden flex-1 items-center space-x-10 md:flex">
+          <div className="hidden flex-1 items-center md:flex">
             <Link
               href="/portfolio"
-              className={`text-sm text-font transition-all hover:text-rose-tan lg:text-base ${path === "/portfolio" && "text-rose-tan"}`}
+              className={`text-sm text-font transition-all hover:text-rose-tan lg:text-base ${path === "/portfolio" && "pl-16 text-rose-tan"}`}
             >
               PORTFOLIO
             </Link>
             <Link
               href={"/contact"}
-              className={`text-sm text-font transition-all hover:text-rose-tan lg:text-base ${path === "/contact" && "text-rose-tan"}`}
+              className={`pl-16 text-sm text-font transition-all hover:text-rose-tan lg:text-base ${path === "/contact" && "text-rose-tan"}`}
             >
               CONTACT
             </Link>

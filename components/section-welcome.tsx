@@ -9,48 +9,52 @@ export default function SectionWelcome() {
 
   return (
     <div className="relative">
-      {/* <Image
-        src={"/assets/border2.png"}
-        fill
-        alt="Border"
-        className="absolute z-[0] object-cover"
-      /> */}
-
-      <div className="container relative mx-auto grid pb-36 pt-28 md:grid-cols-2 lg:pb-72 lg:pt-36">
-        <div className="flex flex-col items-start justify-center space-y-5">
-          <div className="w-full space-y-5 text-center md:text-start lg:space-y-10">
-            <h1 className="text-3xl font-medium tracking-wider text-bold md:max-w-[500px] md:text-4xl lg:text-5xl xl:text-6xl">
+      <div className="container relative mx-auto flex flex-col pb-36 pt-28 md:flex-row lg:pb-72 lg:pt-36">
+        {/* Left */}
+        <div className="flex w-full flex-col items-start justify-center space-y-5 md:w-[45%]">
+          <div className="w-full space-y-2 text-center md:text-start lg:space-y-5">
+            <h1 className="w-full font-carmorant text-3xl font-medium leading-[60px] tracking-[0.5rem] text-bold md:max-w-[500px] md:text-5xl">
               Embrace Elegance, Celebrate Love
             </h1>
-            <p className="tracking-wide text-light-accent md:text-lg lg:text-xl xl:text-2xl">
+            <p className=" font-light text-[#2B2B2B] md:text-lg lg:text-xl xl:text-xl">
               Welcome to FIOR Wedding Event Organizer
             </p>
           </div>
           <Button
             onClick={() => router.push("/about")}
-            className="mx-auto py-7 md:mx-0 md:text-lg lg:py-10 lg:text-xl"
+            className="spectral-regular mx-auto bg-[#DBBEB8] px-[57px] py-[30px] text-white md:mx-0 md:text-lg lg:text-xl"
           >
             ABOUT US
           </Button>
         </div>
-        <div className="relative mt-10 md:mt-0">
-          <div className="relative aspect-square overflow-hidden rounded">
-            <Image
-              src="/assets/fior/Snapinsta.app_377912124_213194728427276_7675588262288677813_n_1080.jpg"
-              alt="Welcome Image"
-              fill
-              className="absolute object-contain"
-            />
-          </div>
-          <div className="absolute bottom-[-60%] left-[-20%] z-10 hidden h-full w-full md:block">
-            <div className="relative h-[60%] w-[60%] overflow-hidden rounded">
+
+        {/* Right */}
+        <div className="mt-10 flex flex-1 flex-row gap-5 md:mt-0">
+          <div className="w-[40%] space-y-2">
+            <div className="relative h-[50%] overflow-hidden rounded-bl-[50px] rounded-tr-[50px]">
               <Image
-                src="/assets/fior/Snapinsta.app_435479674_18308444656148018_2255223913511660480_n_1080.jpg"
-                alt="Welcome Image"
+                src={"/assets/revision/2619f16706ef10041903482f56901611.jpeg"}
+                alt=""
                 fill
                 className="absolute"
               />
             </div>
+            <div className="relative h-[50%] overflow-hidden rounded-br-[50px] rounded-tl-[50px]">
+              <Image
+                src={"/assets/revision/2140d29a1761ba857af54c7632483dcc.png"}
+                alt=""
+                fill
+                className="absolute"
+              />
+            </div>
+          </div>
+          <div className="relative h-[516px] flex-1 overflow-hidden rounded-br-[100px] rounded-tl-[100px]">
+            <Image
+              src="/assets/fior/Snapinsta.app_377912124_213194728427276_7675588262288677813_n_1080.jpg"
+              alt="Welcome Image"
+              fill
+              className="absolute"
+            />
           </div>
         </div>
       </div>

@@ -9,8 +9,10 @@ export default function Home() {
   return (
     <Template>
       <Hero />
-      <SectionWelcome />
-      <HowHelp />
+      <div className="bg-custom-welcome ">
+        <SectionWelcome />
+        <HowHelp />
+      </div>
       <Testimonial />
       <CreateWedding />
     </Template>

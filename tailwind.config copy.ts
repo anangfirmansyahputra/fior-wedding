@@ -27,6 +27,7 @@ const config: Config = {
       fontFamily: {
         carmorant: ["Carmorant", "sans"],
         semplicita: ["Semplicita", "sans"],
+        amiri: ["Amiri", "sans"],
       },
     },
   },

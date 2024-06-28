@@ -5,24 +5,43 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-background font-semplicita">
+    <footer className="bg-custom-footer font-semplicita">
       <div className="container mx-auto p-4 px-10 py-6 md:px-10 md:py-20 2xl:px-0">
-        <div
-          // className="md:flex md:justify-between"
-          className="grid gap-5 lg:grid-cols-3"
-        >
-          <div className="mb-6 hidden md:mb-0 lg:block">
-            <a href="https://flowbite.com/" className="flex items-center">
-              {/* <img
-                src="/assets/logo.jpg"
-                className="me-3 h-8"
-                alt="FlowBite Logo"
-              /> */}
-              <span className="self-center whitespace-nowrap font-semplicita text-2xl font-semibold tracking-widest text-font">
-                {/* FIOR FOUNDER & TEAM PHOTO */}
-                FIOR
-              </span>
-            </a>
+        <div className="grid gap-5 lg:grid-cols-3">
+          <div className="mb-6 hidden space-y-[27px] md:mb-0 lg:block">
+            <div className="relative h-[71px] w-[120px]">
+              <Image
+                src={"/assets/revision/Group 23.svg"}
+                alt=""
+                fill
+                className="absolute w-full"
+              />
+            </div>
+            <p className="font-amiri w-full max-w-[370px] leading-[35px] text-[#2B2B2B]">
+              Every wedding is unique. We offer personalized planning tailored
+              to your vision and preferences to ensure your day is exactly as
+              you imagined.
+            </p>
+            <div className="text-[#2B2B2B]">
+              <div className="flex cursor-pointer gap-[5px]">
+                <Image
+                  src="/assets/revision/ic_baseline-whatsapp.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                />
+                <span className="font-amiri">Inquiry Form</span>
+              </div>
+              <div className="mt-[10px] flex gap-[5px]">
+                <Image
+                  src="/assets/revision/ic_baseline-whatsapp (1).svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                />
+                <div className="font-amiri">Call Us</div>
+              </div>
+            </div>
           </div>
 
           <div className="space-y-10 lg:mr-20">
@@ -33,8 +52,9 @@ export default function Footer() {
               <div className="flex flex-col items-center space-y-5 ">
                 <div className="relative h-[120px] w-[120px] overflow-hidden rounded-full md:h-[150px] md:w-[150px]">
                   <Image
-                    className="absolute"
-                    src="/assets/fior/people1.png"
+                    className="absolute object-cover"
+                    // src="/assets/fior/people1.png"
+                    src="/assets/owner1.jpeg"
                     alt="Finnie"
                     fill
                   />
@@ -46,8 +66,9 @@ export default function Footer() {
               <div className="flex flex-col items-center space-y-5 ">
                 <div className="relative h-[120px] w-[120px] overflow-hidden rounded-full md:h-[150px] md:w-[150px]">
                   <Image
-                    className="absolute"
-                    src="/assets/fior/people2.png"
+                    className="absolute object-cover"
+                    // src="/assets/fior/people2.png"
+                    src="/assets/owner2.jpeg"
                     alt="Finnie"
                     fill
                   />

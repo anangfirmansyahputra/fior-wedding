@@ -84,6 +84,7 @@ const config = {
       fontFamily: {
         carmorant: ["Carmorant", "sans"],
         semplicita: ["Semplicita", "sans"],
+        amiri: ["Amiri", "sans"],
       },
     },
   },
