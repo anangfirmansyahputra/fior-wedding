@@ -9,7 +9,7 @@ export default function Contact() {
 
   return (
     <div className="bg-white pb-[100px]">
-      <section className="relative z-[1] flex h-[80vh] items-center justify-center">
+      <section className="relative z-[1] flex h-[90vh] items-center justify-center sm:h-[80vh]">
         <div className="absolute top-0 z-[-1] flex h-full w-full flex-col items-center justify-center space-y-10 bg-[rgba(0,0,0,0.69)]"></div>
         <Image
           src="/assets/revision/cd823eb36dadb93283a25c5f8a8f226a.jpeg"
@@ -17,7 +17,7 @@ export default function Contact() {
           fill
           className="absolute z-[-2] object-cover object-center"
         />
-        <div className="relative mb-[10vh]">
+        <div className="relative mb-[15vh] lg:mb-[10vh]">
           <div className="mx-auto w-fit">
             <p className="cardo-regular text-4xl text-white">CONTACT US</p>
             <div className="mx-auto mb-[30px] mt-[10px] h-[3px] w-[50%] bg-[#DBBEB8]" />
@@ -31,7 +31,7 @@ export default function Contact() {
 
       <form
         action="#"
-        className="relative z-[1] mx-auto mt-[-25vh] grid w-full max-w-[1145px] grid-cols-2 gap-5 bg-[#DBBEB8] px-[113px] py-[57px] font-semplicita"
+        className="relative z-[1] mt-[-25vh] w-full grid-cols-1 gap-5 space-y-5 bg-[#DBBEB8] px-5 py-[57px] font-semplicita md:mx-auto md:grid md:max-w-[1145px] md:grid-cols-2 md:space-y-0 md:px-[80] lg:px-[113px]"
       >
         <div>
           <label className="mb-2 block text-sm font-medium text-white">
