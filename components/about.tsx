@@ -4,10 +4,10 @@ export default function About() {
   return (
     <>
       <div className="relative">
-        <div className="container relative z-[1] mx-auto space-y-10 py-10 md:py-32">
+        <div className="container relative z-[1] mx-auto space-y-10 py-20 md:py-32">
           <div>
-            <div className="relative flex h-fit flex-row">
-              <div className="absolute top-[50px] h-full w-full max-w-[380px] space-y-[20px] bg-[#DBBEB8]">
+            <div className="relative flex h-fit flex-col space-y-5 lg:flex-row lg:space-y-0">
+              <div className="top-[50px] mx-auto aspect-square h-full w-full max-w-[380px] space-y-[20px] bg-[#DBBEB8] lg:absolute">
                 <div className="relative flex h-full flex-col items-center justify-center">
                   <div className="font-carmorant text-[20px] text-[#2B2B2B]">
                     FIOR WEDDING
@@ -36,24 +36,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              {/* <div className="space-y-4">
-                <div className="bg-sea-salt px-10 pb-5 pt-16">
-                  <p className="font-carmorant font-light tracking-[0.5rem] text-thunderstrom">
-                    FIOR WEDDING
-                  </p>
-                </div>
-                <div className="space-y-5 bg-peach-whip p-10  font-carmorant text-background">
-                  <h2 className="w-[60%] text-4xl font-bold tracking-widest lg:text-5xl">
-                    ABOUT THE COMPANY
-                  </h2>
-                  <p className="tracking-widest">FIOR STORY</p>
-                </div>
-                <div className="bg-sea-salt px-10 pb-8 pt-12">
-                  <p className="text-sm text-thunderstrom">SINCE 2015</p>
-                </div>
-              </div> */}
-
-              <div className="ml-[300px] h-fit space-y-10 rounded-br-[100px] rounded-tl-[100px] bg-white p-[55px] pl-[150px] font-amiri text-lg tracking-wide text-[#2B2B2B] ">
+              <div className="h-fit space-y-5 rounded-br-[100px] rounded-tl-[100px] bg-white p-10 font-amiri text-base tracking-wide text-[#2B2B2B] md:space-y-10 md:text-lg lg:ml-[300px] lg:p-[55px] lg:pl-[150px] ">
                 <p>
                   Originating from the essence of Irish culture, FIOR epitomizes
                   sincerity, earnestness, and beauty. Its journey began in
@@ -85,7 +68,7 @@ export default function About() {
           src="/assets/revision/RenaldiGabriellaWedding-185 1.svg"
           alt=""
           fill
-          className="z-0"
+          className="absolute object-cover"
         />
       </div>
 
