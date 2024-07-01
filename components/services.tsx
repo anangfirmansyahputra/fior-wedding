@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <div className="bg-white">
       <div className="relative">
-        <div className="container relative z-[2] flex aspect-video flex-col items-center justify-center">
+        <div className="container relative z-[2] flex aspect-square flex-col items-center justify-center lg:aspect-video">
           <div className="mx-auto w-fit">
             <h1 className="cardo-regular text-[36px] leading-[48px] text-white">
               OUR SERVICES
@@ -29,9 +29,9 @@ export default function Services() {
         />
       </div>
 
-      <div className="relative flex w-full flex-col space-y-[100px] overflow-hidden bg-white pt-[100px]">
-        <div className="relative flex w-[80%] gap-[100px] self-end rounded-tl-[50px] bg-[#F2EEEE]">
-          <div className="relative z-[1] aspect-square w-[430px] overflow-hidden rounded-br-[50px] rounded-tl-[50px]">
+      <div className="relative flex w-full flex-col space-y-[100px] overflow-hidden bg-white px-10 pt-[100px] lg:px-0">
+        <div className="relative flex w-full flex-col gap-[40px] self-end rounded-tl-[50px] md:flex-row md:bg-[#F2EEEE] lg:w-[80%] xl:gap-[100px]">
+          <div className="relative z-[1] aspect-square w-full overflow-hidden rounded-br-[50px] rounded-tl-[50px] md:w-[350px] lg:w-[430px]">
             <Image
               src={"/assets/revision/9b0d293c2dbdb02462a3c1881b8ec529.jpeg"}
               alt=""
@@ -47,7 +47,8 @@ export default function Services() {
               </p>
             </div>
           </div>
-          <div className="flex-1 space-y-[10px] py-[63px]">
+
+          <div className="flex-1 space-y-[10px] rounded-lg bg-[#F2EEEE] px-5 py-5 md:rounded-none md:bg-none md:py-[63px] lg:px-0">
             <h5 className="cardo-regular text-[20px] text-[#2b2b2b]">
               JAKARTA WEDDING : 10 CREWS ON THE DAY
             </h5>
@@ -71,7 +72,7 @@ export default function Services() {
               <li>Administration Arrangement</li>
             </ul>
           </div>
-          <div className="absolute bottom-0 left-[-45%] z-[0] h-[80%] w-[80%]">
+          <div className="absolute bottom-0 left-[-45%] z-[0] hidden h-[80%] w-[80%] lg:block">
             <div className="relative h-full w-full">
               <Image
                 src={"/assets/revision/Vector (2).svg"}
@@ -83,7 +84,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="relative flex w-[80%] gap-[100px] self-start rounded-tr-[50px] bg-[#F2EEEE]">
+        {/* <div className="relative flex w-[80%] gap-[100px] self-start rounded-tr-[50px] bg-[#F2EEEE]">
           <div className="relative z-[1] order-2 aspect-square w-[430px] overflow-hidden rounded-bl-[50px] rounded-tr-[50px]">
             <Image
               src={"/assets/revision/9b0d293c2dbdb02462a3c1881b8ec529.jpeg"}
@@ -139,10 +140,10 @@ export default function Services() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="flex w-full">
-          <div className="relative aspect-square w-[430px]">
+        <div className="relative flex w-full flex-col gap-[40px] rounded-tl-[50px] md:flex-row md:bg-[#F2EEEE] lg:w-[80%] xl:gap-[100px]">
+          <div className="relative z-[1] aspect-square w-full overflow-hidden rounded-br-[50px] rounded-tl-[50px] md:order-2 md:w-[350px] lg:w-[430px]">
             <Image
               src={"/assets/revision/9b0d293c2dbdb02462a3c1881b8ec529.jpeg"}
               alt=""
@@ -151,9 +152,71 @@ export default function Services() {
             />
             <div className="absolute bottom-0 flex h-1/2 w-full flex-col items-center justify-center space-y-[30px] bg-[#DBBEB8] px-[28px]">
               <div className="cardo-regular text-center text-[24px] uppercase text-white">
-                ALL IN PACKAGE / CUSTOM PACKAGE
+                wedding organizer
               </div>
               <p className="cardo-regular text-center text-[20px] text-white">
+                Full Day or Half Day Assistance
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-1 flex-col space-y-[10px] rounded-lg bg-[#F2EEEE] md:items-end  md:rounded-none md:bg-none md:py-[63px] lg:px-0">
+            <div className="space-y-[10px] px-5 py-5">
+              <h5 className="cardo-regular text-[20px] text-[#2b2b2b]">
+                JAKARTA WEDDING : 10 CREWS ON THE DAY
+              </h5>
+              <h5 className="cardo-regular text-[20px] text-[#2b2b2b]">
+                NOT APPLICABLE FOR BALI WEDDING
+              </h5>
+              <p className="cardo-bold w-fit bg-[#D1C7BE]">Job Description :</p>
+              <p className="cardo-regular text-[#2b2b2b]">
+                Wedding Organizer includedStandby from Makeup Preparation
+              </p>
+              <p className="cardo-regular text-[#2b2b2b]">
+                One time Technical Meeting
+              </p>
+              <p className="cardo-regular text-[#2b2b2b]">
+                Rundown & Wedding Details
+              </p>
+              <p className="cardo-regular text-[#2b2b2b]">
+                Assistance from 3 months before The Day
+              </p>
+              <ul className="list-disc pl-5">
+                <li>Venue inspection</li>
+                <li>Fitting schedule arrangement</li>
+                <li>Food Tasting</li>
+                <li>Technical Meeting 1x</li>
+                <li>Budgeting Sheet</li>
+                <li>Wedding Checklist</li>
+                <li>Administration Arrangement</li>
+              </ul>
+            </div>
+          </div>
+          <div className="absolute bottom-0 right-[-45%] z-[0] hidden h-[80%] w-[80%] lg:block">
+            <div className="relative h-full w-full">
+              <Image
+                src={"/assets/revision/Vector (3).svg"}
+                alt=""
+                fill
+                className="absolute"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex w-full flex-col lg:flex-row">
+          <div className="relative aspect-square w-full sm:aspect-video lg:aspect-square lg:w-[430px]">
+            <Image
+              src={"/assets/revision/9b0d293c2dbdb02462a3c1881b8ec529.jpeg"}
+              alt=""
+              fill
+              className="absolute object-cover"
+            />
+            <div className="absolute bottom-0 flex h-1/2 w-full flex-col items-center justify-center space-y-[30px] bg-[#DBBEB8] px-[28px]">
+              <div className="cardo-regular text-center uppercase text-white sm:text-[24px]">
+                ALL IN PACKAGE / CUSTOM PACKAGE
+              </div>
+              <p className="cardo-regular text-center text-white sm:text-[20px]">
                 All In Package with venue and all the vendors included
               </p>
             </div>
@@ -164,7 +227,7 @@ export default function Services() {
                 <p className="font-carmorant text-sm text-[#555] md:text-lg">
                   PACKAGE INCLUSION
                 </p>
-                <div className="grid gap-5 md:grid-cols-3">
+                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   <div className="space-y-3">
                     <p className="w-fit bg-[#D1C7BE] font-bold tracking-widest">
                       Decoration :
@@ -229,7 +292,7 @@ export default function Services() {
                       </ul>
                     </div>
                   </div>
-                  <div className="space-y-5 p-5">
+                  <div className="space-y-5">
                     <div className="space-y-1">
                       <p className="w-fit bg-[#D1C7BE] font-bold tracking-widest">
                         Wedding Gown :
