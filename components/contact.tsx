@@ -217,7 +217,7 @@ export default function Contact() {
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
           type="submit"
-          className="rounded bg-rose-tan px-10 py-3 text-white"
+          className="w-fit rounded bg-white px-12 py-5 text-[#DBBEB8]"
         >
           Send message
         </motion.button>

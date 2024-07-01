@@ -1,8 +1,6 @@
 import Contact from "@/components/contact";
-import CreateWedding from "@/components/create-wedding";
 import Template from "@/components/template";
 import { Metadata } from "next";
-import React from "react";
 
 export const metadata: Metadata = {
   title: "Contact Us - Fior Wedding Organizer",

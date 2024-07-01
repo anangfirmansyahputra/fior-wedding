@@ -42,45 +42,26 @@ export default function Card({
   }
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow">
+    <article className="flex flex-col space-y-[16px] overflow-hidden rounded-lg border border-gray-200 bg-white p-[16px] shadow">
       <div className="relative aspect-video">
         <Image src={image} fill alt="bg" className="object-cover" />
       </div>
-      <div className="flex flex-1 flex-col p-5">
-        <h5 className="mb-2 truncate text-2xl font-bold tracking-tight">
+      <div className="flex flex-1 flex-col">
+        <h5 className="alata-regular mb-2 text-[20px] text-[#2B2B2B]">
           {title}
         </h5>
-        <div className="mb-5 flex items-center justify-between font-carmorant">
-          <p className="text-sm font-bold text-rose-tan">{author}</p>
-          <p className="text-sm text-bold">{formattedDate(created_at)}</p>
-        </div>
         <div className="flex flex-1 flex-col ">
           <p
-            className="mb-3 flex-1  font-normal text-font"
+            className="my-2 font-amiri"
             dangerouslySetInnerHTML={{
               __html: truncateContent(description, 150),
             }}
           />
           <Link
             href={href}
-            className="flex w-fit items-center rounded bg-peach-whip px-10 py-2 text-white transition-all duration-150 hover:bg-rose-tan"
+            className="alata-regular flex w-fit items-center rounded-lg border border-[#D19C98] px-4 py-2 text-[#D19C98] transition-all duration-150 hover:border-[#fff] hover:bg-[#D19C98] hover:text-white"
           >
             Read more
-            <svg
-              className="ms-2 h-3.5 w-3.5 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
           </Link>
         </div>
       </div>

@@ -68,6 +68,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;0,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 @layer base {
   :root {
@@ -218,4 +219,10 @@
 
 .bg-custom-about {
   background: linear-gradient(180deg, #FFFFFF 12.53%, #D1C7BE 46.17%, rgba(219, 190, 184, 0.8) 70.17%, #FFFFFF 98.67%);
+}
+
+.alata-regular {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

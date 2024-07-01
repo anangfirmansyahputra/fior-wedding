@@ -98,7 +98,7 @@ export default function Navbar() {
           <div className="hidden flex-1 items-center md:flex">
             <Link
               href="/portfolio"
-              className={`text-sm text-font transition-all hover:text-rose-tan lg:text-base ${path === "/portfolio" && "pl-16 text-rose-tan"}`}
+              className={`text-sm text-font transition-all hover:text-rose-tan lg:text-base ${path === "/portfolio" && " text-rose-tan"}`}
             >
               PORTFOLIO
             </Link>
