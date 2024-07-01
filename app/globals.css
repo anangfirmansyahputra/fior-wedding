@@ -215,3 +215,7 @@
 .bg-custom-footer {
   background: linear-gradient(360deg, #DBBEB8 -26.52%, #E8E3DD 61.7%, #FFFFFF 100%);
 }
+
+.bg-custom-about {
+  background: linear-gradient(180deg, #FFFFFF 12.53%, #D1C7BE 46.17%, rgba(219, 190, 184, 0.8) 70.17%, #FFFFFF 98.67%);
+}
