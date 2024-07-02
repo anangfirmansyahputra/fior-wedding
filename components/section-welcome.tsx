@@ -9,7 +9,7 @@ export default function SectionWelcome() {
 
   return (
     <div className="relative">
-      <div className="container relative mx-auto flex flex-col gap-10 pb-36 pt-28 lg:flex-row lg:gap-0 lg:pb-72 lg:pt-36">
+      <div className="container relative mx-auto flex flex-col gap-10 pb-36 pt-28 lg:flex-row lg:gap-0 lg:pb-8 lg:pt-36">
         {/* Left */}
         <div className="mx-auto flex w-full flex-col items-center justify-center space-y-10 lg:w-[45%] lg:items-start lg:space-y-5">
           <div className="w-full space-y-5 text-center lg:text-start">

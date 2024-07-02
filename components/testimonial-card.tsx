@@ -12,13 +12,13 @@ const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
   const [showButton, setShowButton] = useState(false);
   const textRef = useRef(null);
 
-  useEffect(() => {
-    const textElement = textRef.current;
-    if (textElement) {
-      // @ts-ignore
-      setShowButton(textElement.scrollHeight > textElement.clientHeight);
-    }
-  }, [testimonial.text]);
+  // useEffect(() => {
+  //   const textElement = textRef.current;
+  //   if (textElement) {
+  //     // @ts-ignore
+  //     setShowButton(textElement.scrollHeight > textElement.clientHeight);
+  //   }
+  // }, [testimonial.text]);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -27,7 +27,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
   return (
     <div
       key={testimonial.id}
-      className={`mb-5 flex ${isExpanded ? "h-fit" : "h-[400px] md:h-[350px]"} flex-col items-center rounded-[12px] bg-[#DBBEB8] px-[18px] py-[18px]`}
+      className={`mb-5 flex h-[450px] flex-col items-center rounded-[12px] bg-[#DBBEB8] px-[18px] py-[18px]`}
     >
       <div className="mb-[38px] flex w-full items-center justify-center gap-2">
         <Image
@@ -62,21 +62,12 @@ const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
             ))}
           </div>
         </div>
-
         <div
-          ref={textRef}
-          className={`pt-[15px] text-center text-sm ${!isExpanded ? "line-clamp-3" : ""}`}
+          className={`h-[200px] overflow-scroll pt-[15px] text-center text-sm`}
           dangerouslySetInnerHTML={{
             __html: testimonial.text,
           }}
         />
-        {showButton && (
-          <div className="flex items-center">
-            <button onClick={toggleExpand} className="mx-auto mt-2 ">
-              <Ellipsis />
-            </button>
-          </div>
-        )}
 
         <div className="flex flex-1 flex-col items-center justify-end">
           <h5 className="cardo-bold mt-[15px] text-center text-base">
