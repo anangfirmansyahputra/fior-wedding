@@ -17,7 +17,7 @@ export default function Contact() {
           fill
           className="absolute z-[-2] object-cover object-center"
         />
-        <div className="relative mb-[15vh] lg:mb-[10vh]">
+        <div className="relative mb-[20vh] lg:mb-[10vh]">
           <div className="mx-auto w-fit">
             <p className="cardo-regular text-[24px] text-white md:text-4xl">
               CONTACT US

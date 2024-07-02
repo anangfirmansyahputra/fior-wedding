@@ -23,7 +23,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
 
   return (
     <Template>
-      <div className="h-[80vh] items-center justify-center">
+      <div className="h-[80vh] items-center justify-center overflow-hidden">
         <div className="relative h-1/2 w-full">
           <Image
             src={"/assets/revision/6f03f1767ae1efe5d9a2cd267667eec7.jpeg"}
