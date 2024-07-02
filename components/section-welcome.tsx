@@ -9,11 +9,11 @@ export default function SectionWelcome() {
 
   return (
     <div className="relative">
-      <div className="container relative mx-auto flex flex-col pb-36 pt-28 md:flex-row lg:pb-72 lg:pt-36">
+      <div className="container relative mx-auto flex flex-col gap-10 pb-36 pt-28 lg:flex-row lg:gap-0 lg:pb-72 lg:pt-36">
         {/* Left */}
-        <div className="flex w-full flex-col items-start justify-center space-y-5 md:w-[45%]">
-          <div className="w-full space-y-2 text-center md:text-start lg:space-y-5">
-            <h1 className="w-full font-carmorant text-3xl font-medium leading-[60px] tracking-[0.5rem] text-bold md:max-w-[500px] md:text-4xl lg:text-5xl">
+        <div className="mx-auto flex w-full flex-col items-center justify-center space-y-10 lg:w-[45%] lg:items-start lg:space-y-5">
+          <div className="w-full space-y-5 text-center lg:text-start">
+            <h1 className="w-full font-carmorant text-3xl font-medium leading-[50px] tracking-wider text-bold md:text-4xl md:leading-[60px] md:tracking-[0.5rem] lg:max-w-[500px] lg:text-5xl">
               Embrace Elegance, Celebrate Love
             </h1>
             <p className=" font-light text-[#2B2B2B] md:text-lg lg:text-xl xl:text-xl">
@@ -29,8 +29,8 @@ export default function SectionWelcome() {
         </div>
 
         {/* Right */}
-        <div className="mt-20 flex flex-1 flex-row gap-5 md:mt-0">
-          <div className="w-[40%] space-y-2">
+        <div className="mt-0 flex flex-1 flex-col  gap-5 md:mt-20 md:flex-row">
+          <div className="hidden aspect-square space-y-2 md:block md:w-[40%]">
             <div className="relative h-[50%] overflow-hidden rounded-bl-[50px] rounded-tr-[50px]">
               <Image
                 src={"/assets/revision/2619f16706ef10041903482f56901611.jpeg"}
@@ -48,7 +48,7 @@ export default function SectionWelcome() {
               />
             </div>
           </div>
-          <div className="relative h-[400px] flex-1 overflow-hidden rounded-br-[100px] rounded-tl-[100px] lg:h-[516px]">
+          <div className="relative aspect-square flex-1 overflow-hidden rounded-br-[100px] rounded-tl-[100px] md:h-[400px] lg:h-[516px]">
             <Image
               src="/assets/fior/Snapinsta.app_377912124_213194728427276_7675588262288677813_n_1080.jpg"
               alt="Welcome Image"

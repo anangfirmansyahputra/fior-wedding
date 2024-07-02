@@ -28,7 +28,7 @@ export default function HowHelp() {
                 <div className="absolute z-[1] h-full w-full rounded-bl-[50px] rounded-tr-[50px] bg-[#DBBEB8]" />
                 <div className="relative h-full w-full">
                   <div className="absolute h-full w-full">
-                    <div className="relative bottom-[-100px] left-[-100px] h-full max-h-[250px] w-full max-w-[250px]">
+                    <div className="relative bottom-[-100px] left-[-100px] hidden h-full max-h-[250px] w-full max-w-[250px] md:block">
                       <Image
                         src="/assets/revision/Vector.svg"
                         alt=""
@@ -75,7 +75,7 @@ export default function HowHelp() {
                 <div className="absolute z-[1] h-full w-full rounded-br-[50px] rounded-tl-[50px] bg-[#DBBEB8]" />
                 <div className="relative h-full w-full">
                   <div className="absolute h-full w-full">
-                    <div className="relative bottom-[-100px] right-[-160px] h-full max-h-[250px] w-full max-w-[250px] scale-x-[-1]">
+                    <div className="relative bottom-[-100px] right-[-160px] hidden h-full max-h-[250px] w-full max-w-[250px] scale-x-[-1] md:block">
                       <Image
                         src="/assets/revision/Vector.svg"
                         alt=""
@@ -101,7 +101,7 @@ export default function HowHelp() {
                 <div className="absolute z-[1] h-full w-full rounded-bl-[50px] rounded-tr-[50px] bg-[#DBBEB8]" />
                 <div className="relative h-full w-full">
                   <div className="absolute h-full w-full">
-                    <div className="relative bottom-[-100px] left-[-100px] h-full max-h-[250px] w-full max-w-[250px]">
+                    <div className="relative bottom-[-100px] left-[-100px] hidden h-full max-h-[250px] w-full max-w-[250px] md:block">
                       <Image
                         src="/assets/revision/Vector.svg"
                         alt=""
@@ -148,7 +148,7 @@ export default function HowHelp() {
                 <div className="absolute z-[1] h-full w-full rounded-br-[50px] rounded-tl-[50px] bg-[#DBBEB8]" />
                 <div className="relative h-full w-full">
                   <div className="absolute h-full w-full">
-                    <div className="relative bottom-[-100px] right-[-160px] h-full max-h-[250px] w-full max-w-[250px] scale-x-[-1]">
+                    <div className="relative bottom-[-100px] right-[-160px] hidden h-full max-h-[250px] w-full max-w-[250px] scale-x-[-1] md:block">
                       <Image
                         src="/assets/revision/Vector.svg"
                         alt=""
