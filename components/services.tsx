@@ -8,12 +8,12 @@ export default function Services() {
       <div className="relative">
         <div className="container relative z-[2] flex aspect-square flex-col items-center justify-center lg:aspect-video">
           <div className="mx-auto w-fit">
-            <h1 className="cardo-regular text-[36px] leading-[48px] text-white">
+            <h1 className="cardo-regular text-[24px] leading-[48px] text-white md:text-[36px]">
               OUR SERVICES
             </h1>
             <div className="mx-auto mb-[30px] mt-[10px] h-[3px] w-[50%] bg-[#DBBEB8]" />
           </div>
-          <p className="cardo-regular w-full max-w-[1000px] text-center text-[20px] text-white">
+          <p className="cardo-regular w-full max-w-[1000px] text-center text-white md:text-[20px]">
             Our Services Welcome to our comprehensive suite of services designed
             to turn your special occasion into an unforgettable experience. At
             [Your Company Name], we pride ourselves on offering a range of
@@ -29,8 +29,8 @@ export default function Services() {
         />
       </div>
 
-      <div className="relative flex w-full flex-col space-y-[100px] overflow-hidden bg-white px-10 pt-[100px] lg:px-0">
-        <div className="relative flex w-full flex-col gap-[40px] self-end rounded-tl-[50px] md:flex-row md:bg-[#F2EEEE] lg:w-[80%] xl:gap-[100px]">
+      <div className="relative flex w-full flex-col space-y-[100px] overflow-hidden bg-white pt-[100px] lg:px-0">
+        <div className="relative flex w-full flex-col gap-[40px] self-end rounded-tl-[50px] px-10 md:flex-row lg:w-[80%] lg:bg-[#F2EEEE] lg:px-0 xl:gap-[100px]">
           <div className="relative z-[1] aspect-square w-full overflow-hidden rounded-br-[50px] rounded-tl-[50px] md:w-[350px] lg:w-[430px]">
             <Image
               src={"/assets/revision/9b0d293c2dbdb02462a3c1881b8ec529.jpeg"}
@@ -39,20 +39,20 @@ export default function Services() {
               className="absolute object-cover"
             />
             <div className="absolute bottom-0 flex h-1/2 w-full flex-col items-center justify-center space-y-[30px] bg-[#DBBEB8] px-[28px]">
-              <div className="cardo-regular text-center text-[24px] uppercase text-white">
+              <div className="cardo-regular text-center uppercase text-white md:text-[24px]">
                 Wedding Planner SERVICES
               </div>
-              <p className="cardo-regular text-center text-[20px] text-white">
+              <p className="cardo-regular text-center text-white md:text-[20px]">
                 Wedding Organizer included, Full Day Assistance up to 18 hours
               </p>
             </div>
           </div>
 
           <div className="flex-1 space-y-[10px] rounded-lg bg-[#F2EEEE] px-5 py-5 md:rounded-none md:bg-none md:py-[63px] lg:px-0">
-            <h5 className="cardo-regular text-[20px] text-[#2b2b2b]">
+            <h5 className="cardo-regular text-[#2b2b2b] md:text-[20px]">
               JAKARTA WEDDING : 10 CREWS ON THE DAY
             </h5>
-            <h5 className="cardo-regular text-[20px] text-[#2b2b2b]">
+            <h5 className="cardo-regular text-[#2b2b2b] md:text-[20px]">
               BALI WEDDING : 8 CREWS ON THE DAY
             </h5>
             <p className="cardo-bold w-fit bg-[#D1C7BE]">Scope of work :</p>
@@ -84,65 +84,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* <div className="relative flex w-[80%] gap-[100px] self-start rounded-tr-[50px] bg-[#F2EEEE]">
-          <div className="relative z-[1] order-2 aspect-square w-[430px] overflow-hidden rounded-bl-[50px] rounded-tr-[50px]">
-            <Image
-              src={"/assets/revision/9b0d293c2dbdb02462a3c1881b8ec529.jpeg"}
-              alt=""
-              fill
-              className="absolute object-cover"
-            />
-            <div className="absolute bottom-0 flex h-1/2 w-full flex-col items-center justify-center space-y-[30px] bg-[#DBBEB8] px-[28px]">
-              <div className="cardo-regular text-center text-[24px] uppercase text-white">
-                Wedding Planner SERVICES
-              </div>
-              <p className="cardo-regular text-center text-[20px] text-white">
-                Wedding Organizer included, Full Day Assistance up to 18 hours
-              </p>
-            </div>
-          </div>
-          <div className="order-1 flex-1 space-y-[10px] py-[63px] pl-[100px]">
-            <h5 className="cardo-regular text-[20px] text-[#2b2b2b]">
-              JAKARTA WEDDING : 10 CREWS ON THE DAY
-            </h5>
-            <h5 className="cardo-regular text-[20px] text-[#2b2b2b]">
-              NOT APPLICABLE FOR BALI WEDDING
-            </h5>
-            <p className="cardo-bold w-fit bg-[#D1C7BE]">Job Description :</p>
-            <p className="cardo-regular text-[#2b2b2b]">
-              Standby from Makeup Preparation
-            </p>
-            <p className="cardo-regular text-[#2b2b2b]">
-              One time Technical Meeting
-            </p>
-            <p className="cardo-regular text-[#2b2b2b]">
-              Rundown & Wedding Details
-            </p>
-            <p className="cardo-regular text-[#2b2b2b]">
-              Assistance from 3 months before The Day
-            </p>
-            <ul className="list-disc pl-5">
-              <li>Bride & Groom Assistant</li>
-              <li>Family Assistant</li>
-              <li>
-                Bridal Parties Assistant Food & Beverage Coordinator Checker,
-              </li>
-              <li>Runner, Vendor Coordinator, etc</li>
-            </ul>
-          </div>
-          <div className="absolute bottom-0 right-[-45%] z-[0] h-[80%] w-[80%]">
-            <div className="relative h-full w-full">
-              <Image
-                src={"/assets/revision/Vector (3).svg"}
-                alt=""
-                fill
-                className="absolute"
-              />
-            </div>
-          </div>
-        </div> */}
-
-        <div className="relative flex w-full flex-col gap-[40px] rounded-tl-[50px] md:flex-row md:bg-[#F2EEEE] lg:w-[80%] xl:gap-[100px]">
+        <div className="relative flex w-full flex-col gap-[40px] rounded-tl-[50px] px-10 md:flex-row lg:w-[80%] lg:bg-[#F2EEEE] lg:px-0 xl:gap-[100px]">
           <div className="relative z-[1] aspect-square w-full overflow-hidden rounded-br-[50px] rounded-tl-[50px] md:order-2 md:w-[350px] lg:w-[430px]">
             <Image
               src={"/assets/revision/9b0d293c2dbdb02462a3c1881b8ec529.jpeg"}
@@ -151,10 +93,10 @@ export default function Services() {
               className="absolute object-cover"
             />
             <div className="absolute bottom-0 flex h-1/2 w-full flex-col items-center justify-center space-y-[30px] bg-[#DBBEB8] px-[28px]">
-              <div className="cardo-regular text-center text-[24px] uppercase text-white">
+              <div className="cardo-regular text-center uppercase text-white md:text-[24px]">
                 wedding organizer
               </div>
-              <p className="cardo-regular text-center text-[20px] text-white">
+              <p className="cardo-regular text-center text-white md:text-[20px]">
                 Full Day or Half Day Assistance
               </p>
             </div>
@@ -162,10 +104,10 @@ export default function Services() {
 
           <div className="flex flex-1 flex-col space-y-[10px] rounded-lg bg-[#F2EEEE] md:items-end  md:rounded-none md:bg-none md:py-[63px] lg:px-0">
             <div className="space-y-[10px] px-5 py-5">
-              <h5 className="cardo-regular text-[20px] text-[#2b2b2b]">
+              <h5 className="cardo-regular text-[#2b2b2b] md:text-[20px]">
                 JAKARTA WEDDING : 10 CREWS ON THE DAY
               </h5>
-              <h5 className="cardo-regular text-[20px] text-[#2b2b2b]">
+              <h5 className="cardo-regular text-[#2b2b2b] md:text-[20px]">
                 NOT APPLICABLE FOR BALI WEDDING
               </h5>
               <p className="cardo-bold w-fit bg-[#D1C7BE]">Job Description :</p>

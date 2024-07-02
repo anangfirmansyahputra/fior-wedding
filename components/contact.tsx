@@ -19,10 +19,12 @@ export default function Contact() {
         />
         <div className="relative mb-[15vh] lg:mb-[10vh]">
           <div className="mx-auto w-fit">
-            <p className="cardo-regular text-4xl text-white">CONTACT US</p>
+            <p className="cardo-regular text-[24px] text-white md:text-4xl">
+              CONTACT US
+            </p>
             <div className="mx-auto mb-[30px] mt-[10px] h-[3px] w-[50%] bg-[#DBBEB8]" />
           </div>
-          <p className="max-w-[700px] text-center text-[20px] text-white">
+          <p className="max-w-[700px] text-center text-white md:text-[20px]">
             Got a technical issue? Want to send feedback about a beta feature?
             Need details about our Business plan? Let us know.
           </p>
