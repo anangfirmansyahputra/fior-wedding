@@ -3,8 +3,8 @@ import React from "react";
 
 export default function HowHelp() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4 pb-32 pt-20">
+    <section className="md:py-20">
+      <div className="container mx-auto px-10 pb-32 md:px-4 md:pt-20">
         <div className="mx-auto mb-[20px] w-fit">
           <h2 className="cardo-bold text-center text-2xl tracking-wider text-[#2b2b2b]">
             How We Can Help
@@ -15,17 +15,17 @@ export default function HowHelp() {
           Bringing your dream wedding to life with our comprehensive planning
           services.
         </p>
-        <div className="flex flex-col justify-center space-y-[120px] md:space-y-[100px]">
+        <div className="flex flex-col justify-center space-y-[120px] overflow-hidden md:space-y-[100px] md:overflow-auto">
           <div className="mx-auto mt-[60px] flex flex-col items-center gap-20 md:flex-row md:gap-10 lg:gap-[163px]">
-            <div className="relative ml-[70px] h-[400px] w-[320px] md:ml-[180px]">
+            <div className="relative h-[400px] w-[320px] md:ml-[180px]">
               <Image
                 src="/assets/revision/d8e253630f20b8b2c0f8a71b90699aa6.jpeg"
                 alt=""
                 fill
-                className="z-[2] rounded-bl-[50px] rounded-tr-[50px] object-cover"
+                className="z-[2] rounded-bl-[50px] rounded-tr-[50px] object-cover shadow-lg"
               />
               <div className="absolute left-[-70px] top-[-47px] z-[1] h-[400px] w-[320px]">
-                <div className="absolute z-[1] h-full w-full rounded-bl-[50px] rounded-tr-[50px] bg-[#DBBEB8]" />
+                <div className="absolute z-[1] hidden h-full w-full rounded-bl-[50px] rounded-tr-[50px] bg-[#DBBEB8] md:block" />
                 <div className="relative h-full w-full">
                   <div className="absolute h-full w-full">
                     <div className="relative bottom-[-100px] left-[-100px] hidden h-full max-h-[250px] w-full max-w-[250px] md:block">
@@ -64,7 +64,7 @@ export default function HowHelp() {
               </p>
             </div>
 
-            <div className="relative order-1 mr-[70px] flex h-[400px] w-[320px] md:order-2 md:mr-[180px]">
+            <div className="relative order-1 flex h-[400px] w-[320px] md:order-2 md:mr-[180px]">
               <Image
                 src="/assets/revision/9b0d293c2dbdb02462a3c1881b8ec529.jpeg"
                 alt=""
@@ -72,7 +72,7 @@ export default function HowHelp() {
                 className="z-[2] rounded-br-[50px] rounded-tl-[50px] object-cover"
               />
               <div className="absolute right-[-70px] top-[-47px] z-[1] h-[400px] w-[320px]">
-                <div className="absolute z-[1] h-full w-full rounded-br-[50px] rounded-tl-[50px] bg-[#DBBEB8]" />
+                <div className="absolute z-[1] hidden h-full w-full rounded-br-[50px] rounded-tl-[50px] bg-[#DBBEB8] md:block" />
                 <div className="relative h-full w-full">
                   <div className="absolute h-full w-full">
                     <div className="relative bottom-[-100px] right-[-160px] hidden h-full max-h-[250px] w-full max-w-[250px] scale-x-[-1] md:block">
@@ -90,7 +90,7 @@ export default function HowHelp() {
           </div>
 
           <div className="mx-auto mt-[60px] flex flex-col items-center gap-20 md:flex-row md:gap-10 lg:gap-[163px]">
-            <div className="relative ml-[70px] h-[400px] w-[320px] md:ml-[180px]">
+            <div className="relative h-[400px] w-[320px] md:ml-[180px]">
               <Image
                 src="/assets/revision/67f38ff8c7a8c230644f61c512a352bb.jpeg"
                 alt=""
@@ -98,7 +98,7 @@ export default function HowHelp() {
                 className="z-[2] rounded-bl-[50px] rounded-tr-[50px] object-cover"
               />
               <div className="absolute left-[-70px] top-[-47px] z-[1] h-[400px] w-[320px]">
-                <div className="absolute z-[1] h-full w-full rounded-bl-[50px] rounded-tr-[50px] bg-[#DBBEB8]" />
+                <div className="absolute z-[1] hidden h-full w-full rounded-bl-[50px] rounded-tr-[50px] bg-[#DBBEB8] md:block" />
                 <div className="relative h-full w-full">
                   <div className="absolute h-full w-full">
                     <div className="relative bottom-[-100px] left-[-100px] hidden h-full max-h-[250px] w-full max-w-[250px] md:block">
@@ -137,7 +137,7 @@ export default function HowHelp() {
               </p>
             </div>
 
-            <div className="relative order-1 mr-[70px] h-[400px] w-[320px] md:order-2 md:mr-[180px]">
+            <div className="relative order-1 h-[400px] w-[320px] md:order-2 md:mr-[180px]">
               <Image
                 src="/assets/revision/b29a4bfeb9060315eb52905cc2444a3d.jpeg"
                 alt=""
@@ -145,7 +145,7 @@ export default function HowHelp() {
                 className="z-[2] rounded-br-[50px] rounded-tl-[50px] object-cover"
               />
               <div className="absolute right-[-70px] top-[-47px] z-[1] h-[400px] w-[320px]">
-                <div className="absolute z-[1] h-full w-full rounded-br-[50px] rounded-tl-[50px] bg-[#DBBEB8]" />
+                <div className="absolute z-[1] hidden h-full w-full rounded-br-[50px] rounded-tl-[50px] bg-[#DBBEB8] md:block" />
                 <div className="relative h-full w-full">
                   <div className="absolute h-full w-full">
                     <div className="relative bottom-[-100px] right-[-160px] hidden h-full max-h-[250px] w-full max-w-[250px] scale-x-[-1] md:block">

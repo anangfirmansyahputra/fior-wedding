@@ -191,7 +191,7 @@ export default function Testimonial() {
           <div className="mx-auto h-[3px] w-[70%] bg-[#DBBEB8]" />
         </div>
 
-        <p className="font-amiri text-center text-[20px] font-normal leading-[35px] tracking-wide text-[#2B2B2B]">
+        <p className="text-center font-amiri text-[20px] font-normal leading-[35px] tracking-wide text-[#2B2B2B]">
           What our client says about FIOR Wedding Organizer
         </p>
 
@@ -224,7 +224,7 @@ export default function Testimonial() {
           </Slider>
         </div>
 
-        <div className="mx-auto block px-5 md:hidden">
+        <div className="mx-auto block md:hidden md:px-5">
           <Slider {...settingsSm} className="mt-20">
             {testimonials.map((testimonial) => {
               const star = Array(testimonial.star).fill(true);

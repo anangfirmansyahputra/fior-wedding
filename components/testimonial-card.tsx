@@ -27,7 +27,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
   return (
     <div
       key={testimonial.id}
-      className={`mb-5 flex ${isExpanded ? "h-fit" : "h-[350px]"} flex-col items-center rounded-[12px] bg-[#DBBEB8] px-[18px] py-[18px]`}
+      className={`mb-5 flex ${isExpanded ? "h-fit" : "h-[400px] md:h-[350px]"} flex-col items-center rounded-[12px] bg-[#DBBEB8] px-[18px] py-[18px]`}
     >
       <div className="mb-[38px] flex w-full items-center justify-center gap-2">
         <Image
