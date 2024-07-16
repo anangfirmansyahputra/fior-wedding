@@ -66,7 +66,7 @@ export default async function Page({ params }: Props) {
                     <div className="mr-3 inline-flex items-center text-sm text-gray-900 dark:text-white">
                       <img
                         className="mr-4 h-16 w-16 rounded-full"
-                        src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                        src="/assets/profile.png"
                         alt="Jese Leos"
                       />
                       <div>
@@ -94,15 +94,14 @@ export default async function Page({ params }: Props) {
                     fill
                     alt="Images"
                     className="absolute object-cover"
-                    src={
-                      process.env.API_URL + "/api/uploads/" + data.data.image
-                    }
+                    src={process.env.API_URL + "/uploads/" + data.data.image}
                   />
                   {/* <figcaption>Admin</figcaption> */}
                 </figure>
 
                 <div
-                  className="shadow-dom"
+                  // className="shadow-dom"
+                  className="no-more-tailwind"
                   dangerouslySetInnerHTML={{
                     __html: data.data.content,
                   }}

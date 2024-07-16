@@ -52,7 +52,8 @@ export default function Card({
         </h5>
         <div className="flex flex-1 flex-col ">
           <p
-            className="my-2 font-amiri"
+            className="pb-5 font-amiri"
+            // className="no-more-tailwind"
             dangerouslySetInnerHTML={{
               __html: truncateContent(description, 150),
             }}

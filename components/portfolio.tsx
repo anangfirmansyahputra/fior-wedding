@@ -44,9 +44,7 @@ export default function Portfolio({ data, next, page }: PropsPortfolio) {
                   description={item.content}
                   href={`/portfolio/${item.slug}`}
                   image={
-                    process.env.NEXT_PUBLIC_API_URL +
-                    "/api/uploads/" +
-                    item.image
+                    process.env.NEXT_PUBLIC_API_URL + "/uploads/" + item.image
                   }
                   title={item.title}
                   author={item.author}

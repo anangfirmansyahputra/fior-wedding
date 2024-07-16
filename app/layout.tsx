@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import Navbar from "../components/navbar";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import "./no-tailwind.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
