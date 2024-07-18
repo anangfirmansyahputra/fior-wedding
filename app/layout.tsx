@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
     images: [
       {
-        url: "https://fiororganizer.com/_next/image?url=%2Flogo.png&w=256&q=75",
+        url: "/assets/logo.jpeg",
         width: 800,
         height: 600,
         alt: "Fior Wedding Organizer",
