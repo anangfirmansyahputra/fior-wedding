@@ -20,6 +20,15 @@ export const metadata: Metadata = {
   openGraph: {
     images: "https://fiororganizer.com/_next/image?url=%2Flogo.png&w=256&q=75",
   },
+  icons: {
+    icon: "/assets/logo.jpeg",
+    shortcut: "/assets/logo.jpeg",
+    apple: "/assets/logo.jpeg",
+    other: {
+      rel: "/assets/logo.jpeg",
+      url: "/assets/logo.jpeg",
+    },
+  },
 };
 
 export default function RootLayout({
