@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ImageResponse } from "next/og";
 
 // Route segment config
@@ -15,20 +16,7 @@ export default function Icon() {
   return new ImageResponse(
     (
       // ImageResponse JSX element
-      <div
-        style={{
-          fontSize: 24,
-          background: "black",
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "white",
-        }}
-      >
-        Anang
-      </div>
+      <Image src={"/assets/logo.jpeg"} alt="Logo" width={32} height={32} />
     ),
     // ImageResponse options
     {
