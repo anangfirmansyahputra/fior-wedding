@@ -89,11 +89,14 @@ export default function About() {
           </p>
           <div className="mx-auto grid max-w-[800px] gap-10 md:grid-cols-2 lg:grid-cols-2">
             <div className="rounded-lg bg-white p-6 shadow-lg">
-              <img
-                src="/assets/owner1.jpeg"
-                alt="Vinnie Kosasih"
-                className="mb-6 h-64 w-full rounded-lg object-cover"
-              />
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/assets/owner1.jpeg"
+                  alt="Vinnie Kosasih"
+                  className="absolute mb-6 rounded-lg object-cover"
+                  fill
+                />
+              </div>
               <h3 className="text-2xl font-semibold text-gray-800">
                 Vinnie Kosasih
               </h3>
@@ -104,11 +107,13 @@ export default function About() {
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-lg">
-              <img
-                src="/assets/owner2.jpeg"
-                alt="Neeke Santoso"
-                className="mb-6 h-64 w-full rounded-lg object-cover"
-              />
+              <div className="relative h-64 w-full ">
+                <Image
+                  src="/assets/owner2.jpeg"
+                  alt="Neeke Santoso"
+                  className="absolute mb-6 rounded-lg object-cover"
+                />
+              </div>
               <h3 className="text-2xl font-semibold text-gray-800">
                 Neeke Santoso
               </h3>

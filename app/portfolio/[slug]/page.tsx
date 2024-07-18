@@ -64,7 +64,9 @@ export default async function Page({ params }: Props) {
                 <header className="not-format mb-4 lg:mb-6">
                   <address className="mb-6 flex items-center not-italic">
                     <div className="mr-3 inline-flex items-center text-sm text-gray-900 dark:text-white">
-                      <img
+                      <Image
+                        width={64}
+                        height={64}
                         className="mr-4 h-16 w-16 rounded-full"
                         src="/assets/profile.png"
                         alt="Jese Leos"
