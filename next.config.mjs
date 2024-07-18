@@ -18,6 +18,10 @@ const nextConfig = {
         protocol: "http",
         hostname: "bfior.yukmilih.com",
       },
+      {
+        protocol: "https",
+        hostname: "fiororganizer.com",
+      },
     ],
   },
 };
