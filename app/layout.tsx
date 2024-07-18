@@ -9,7 +9,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import "./no-tailwind.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Home - Fior Wedding Organizer",
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
     "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
   keywords:
     "Fior Wedding Organizer,perencana pernikahan,organizer pernikahan,wedding planner,paket pernikahan,layanan pernikahan",
+  openGraph: {
+    title: "Home - Fior Wedding Organizer",
+    description:
+      "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
+    images: [
+      {
+        url: "/assets/logo.jpg",
+        width: 800,
+        height: 600,
+        alt: "Fior Wedding Organizer",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
