@@ -7,7 +7,7 @@ import Testimonial from "@/components/testimonial";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Anang - Fior Wedding Organizer",
+  title: "Home - Fior Wedding Organizer",
   description:
     "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
   keywords:

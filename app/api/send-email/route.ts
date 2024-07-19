@@ -27,7 +27,7 @@ export async function POST(req: Request, res: Response) {
 
     const mailOptions = {
       from: email,
-      to: "anangfirmansyahp5@gmail.com",
+      to: process.env.EMAIL_RECEIVER,
       subject: `Fior Form Submission from ${name}`,
       html: `
       <div style="font-family: Arial, sans-serif; color: #333; padding: 20px; background-color: #f9f9f9;">
