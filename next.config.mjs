@@ -22,6 +22,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "fiororganizer.com",
       },
+      {
+        protocol: "https",
+        hostname: "bfior.fiororganizer.com",
+      },
     ],
   },
 };
