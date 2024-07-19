@@ -31,7 +31,7 @@ export const generateMetadata = async ({
       description: data.data.meta_description,
       images:
         // "https://fiororganizer.com/_next/image?url=%2Flogo.png&w=256&q=75",
-        `${process.env.API_URL}/uploads/${data.image}`,
+        `${process.env.API_URL}/uploads/${data.data.image}`,
       url: `${process.env.API_URL}/api/articles/${params.slug}`,
     },
     icons: {
