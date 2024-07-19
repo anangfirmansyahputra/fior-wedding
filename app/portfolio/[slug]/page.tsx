@@ -22,8 +22,6 @@ export const generateMetadata = async ({
     `${process.env.API_URL}/api/articles/${params.slug}`,
   );
 
-  console.log(data);
-
   return {
     title: data.data.title,
     description: data.data.meta_description,
@@ -31,15 +29,18 @@ export const generateMetadata = async ({
     openGraph: {
       title: data.data.title,
       description: data.data.meta_description,
-      images: [
-        {
-          url: `${process.env.API_URL}/api/uploads/${data.data.image}`,
-          width: 800,
-          height: 600,
-          alt: data.data.title,
-        },
-      ],
+      images:
+        "https://fiororganizer.com/_next/image?url=%2Flogo.png&w=256&q=75",
       url: `${process.env.API_URL}/api/articles/${params.slug}`,
+    },
+    icons: {
+      icon: "/assets/logo.jpeg",
+      shortcut: "/assets/logo.jpeg",
+      apple: "/assets/logo.jpeg",
+      other: {
+        rel: "/assets/logo.jpeg",
+        url: "/assets/logo.jpeg",
+      },
     },
   };
 };
