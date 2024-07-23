@@ -97,7 +97,7 @@ export default function About() {
                   fill
                 />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-800">
+              <h3 className="mt-3 text-2xl font-semibold text-gray-800">
                 Vinnie Kosasih
               </h3>
               <p className="text-lg text-gray-500">Planner</p>
@@ -111,10 +111,11 @@ export default function About() {
                 <Image
                   src="/assets/owner2.jpeg"
                   alt="Neeke Santoso"
+                  fill
                   className="absolute mb-6 rounded-lg object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-800">
+              <h3 className="mt-3 text-2xl font-semibold text-gray-800">
                 Neeke Santoso
               </h3>
               <p className="text-lg text-gray-500">Executor</p>
