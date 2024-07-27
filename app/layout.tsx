@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google268b942106cf1895",
+    google: process.env.GOOGLE_VERIFICATION,
   },
 };
 
