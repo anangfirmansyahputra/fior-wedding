@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       url: "/assets/logo.jpeg",
     },
   },
+  verification: {
+    google: "google268b942106cf1895",
+  },
 };
 
 export default function RootLayout({
