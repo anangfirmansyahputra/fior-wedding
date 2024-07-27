@@ -8,6 +8,7 @@ import Navbar from "../components/navbar";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import "./no-tailwind.css";
+import Script from "next/script";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -41,6 +42,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-H8J5Z3LW2H"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-H8J5Z3LW2H');
+          `}
+        </Script>
+      </head>
       <body className="relative font-carmorant" suppressHydrationWarning>
         <Navbar />
         {children}
