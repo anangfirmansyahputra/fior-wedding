@@ -1,15 +1,25 @@
 import CreateWedding from "@/components/create-wedding";
 import Services from "@/components/services";
 import Template from "@/components/template";
+import axios from "axios";
 import { Metadata } from "next";
 import React from "react";
 
-export const metadata: Metadata = {
-  title: "Service - Fior Wedding Organizer",
-  description:
-    "Fior Wedding Organizer menyediakan beragam layanan pernikahan yang lengkap dan profesional, mulai dari perencanaan hingga pelaksanaan, untuk menciptakan pernikahan yang sempurna sesuai impian Anda.",
-  keywords:
-    "layanan pernikahan, fior wedding organizer, jasa pernikahan, paket pernikahan, layanan wedding planner",
+export const generateMetadata = async (): Promise<Metadata> => {
+  const { data } = await axios.get(`${process.env.API_URL}/api/metadata`);
+
+  return {
+    title: data.service_title || "Services - Fior Wedding Organizer",
+    description:
+      data.service_desc ||
+      "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
+    keywords:
+      data.service_keyword ||
+      "Fior Wedding Organizer,perencana pernikahan,organizer pernikahan,wedding planner,paket pernikahan,layanan pernikahan",
+    openGraph: {
+      images: `${process.env.API_URL}/uploads/logo_hitam.png`,
+    },
+  };
 };
 
 export default function ServicesPage() {

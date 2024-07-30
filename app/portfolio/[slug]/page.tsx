@@ -4,7 +4,6 @@ import Template from "@/components/template";
 import axios from "axios";
 import dayjs from "dayjs";
 
-import ShadowContent from "@/components/shadow-component";
 import { Metadata } from "next";
 import Image from "next/image";
 import { redirect } from "next/navigation";
@@ -29,19 +28,8 @@ export const generateMetadata = async ({
     openGraph: {
       title: data.data.title,
       description: data.data.meta_description,
-      images:
-        // "https://fiororganizer.com/_next/image?url=%2Flogo.png&w=256&q=75",
-        `${process.env.API_URL}/uploads/${data.data.image}`,
+      images: `${process.env.API_URL}/uploads/${data.data.image}`,
       url: `${process.env.API_URL}/api/articles/${params.slug}`,
-    },
-    icons: {
-      icon: "/assets/logo.jpeg",
-      shortcut: "/assets/logo.jpeg",
-      apple: "/assets/logo.jpeg",
-      other: {
-        rel: "/assets/logo.jpeg",
-        url: "/assets/logo.jpeg",
-      },
     },
   };
 };

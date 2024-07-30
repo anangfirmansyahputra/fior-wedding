@@ -9,30 +9,23 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import "./no-tailwind.css";
 import Script from "next/script";
+import axios from "axios";
 
-// const inter = Inter({ subsets: ["latin"] });
+export const generateMetadata = async (): Promise<Metadata> => {
+  const { data } = await axios.get(`${process.env.API_URL}/api/metadata`);
 
-export const metadata: Metadata = {
-  title: "Home - Fior Wedding Organizer",
-  description:
-    "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
-  keywords:
-    "Fior Wedding Organizer,perencana pernikahan,organizer pernikahan,wedding planner,paket pernikahan,layanan pernikahan",
-  openGraph: {
-    images: "https://fiororganizer.com/_next/image?url=%2Flogo.png&w=256&q=75",
-  },
-  icons: {
-    icon: "/assets/logo.jpeg",
-    shortcut: "/assets/logo.jpeg",
-    apple: "/assets/logo.jpeg",
-    other: {
-      rel: "/assets/logo.jpeg",
-      url: "/assets/logo.jpeg",
+  return {
+    title: data.home_title || "Home - Fior Wedding Organizer",
+    description:
+      data.home_desc ||
+      "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
+    keywords:
+      data.home_keyword ||
+      "Fior Wedding Organizer,perencana pernikahan,organizer pernikahan,wedding planner,paket pernikahan,layanan pernikahan",
+    openGraph: {
+      images: `${process.env.API_URL}/uploads/logo_hitam.png`,
     },
-  },
-  verification: {
-    google: process.env.GOOGLE_VERIFICATION,
-  },
+  };
 };
 
 export default function RootLayout({

@@ -5,12 +5,21 @@ import axios from "axios";
 import { Metadata } from "next";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Portofolio - Fior Wedding Organizer",
-  description:
-    "Jelajahi portofolio kami untuk melihat beberapa contoh pernikahan yang telah kami rancang dan laksanakan. Biarkan kami menjadi bagian dari momen bahagia Anda.",
-  keywords:
-    "portofolio, fior wedding organizer, contoh pernikahan, galeri pernikahan, karya wedding planner",
+export const generateMetadata = async (): Promise<Metadata> => {
+  const { data } = await axios.get(`${process.env.API_URL}/api/metadata`);
+
+  return {
+    title: data.portfolio_title || "About Us - Fior Wedding Organizer",
+    description:
+      data.portfolio_desc ||
+      "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
+    keywords:
+      data.portfolio_keyword ||
+      "Fior Wedding Organizer,perencana pernikahan,organizer pernikahan,wedding planner,paket pernikahan,layanan pernikahan",
+    openGraph: {
+      images: `${process.env.API_URL}/uploads/logo_hitam.png`,
+    },
+  };
 };
 
 export const revalidate = 60;
