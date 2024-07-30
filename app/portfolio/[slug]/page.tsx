@@ -84,7 +84,7 @@ export default async function Page({ params }: Props) {
                 <figure className="relative aspect-video overflow-hidden rounded-md">
                   <Image
                     fill
-                    alt="Images"
+                    alt={data.data.title}
                     className="absolute object-cover"
                     src={process.env.API_URL + "/uploads/" + data.data.image}
                   />
