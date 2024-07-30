@@ -6,20 +6,33 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const { data } = await axios.get(`${process.env.API_URL}/api/metadata`);
+  try {
+    const { data } = await axios.get(`${process.env.API_URL}/api/metadata`);
 
-  return {
-    title: data.portfolio_title || "About Us - Fior Wedding Organizer",
-    description:
-      data.portfolio_desc ||
-      "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
-    keywords:
-      data.portfolio_keyword ||
-      "Fior Wedding Organizer,perencana pernikahan,organizer pernikahan,wedding planner,paket pernikahan,layanan pernikahan",
-    openGraph: {
-      images: `${process.env.API_URL}/uploads/logo_hitam.png`,
-    },
-  };
+    return {
+      title: data.portfolio_title || "About Us - Fior Wedding Organizer",
+      description:
+        data.portfolio_desc ||
+        "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
+      keywords:
+        data.portfolio_keyword ||
+        "Fior Wedding Organizer,perencana pernikahan,organizer pernikahan,wedding planner,paket pernikahan,layanan pernikahan",
+      openGraph: {
+        images: `${process.env.API_URL}/uploads/logo_hitam.png`,
+      },
+    };
+  } catch (err) {
+    return {
+      title: "About Us - Fior Wedding Organizer",
+      description:
+        "Fior Wedding Organizer adalah perusahaan perencana pernikahan profesional yang menyediakan layanan lengkap untuk membuat hari istimewa Anda menjadi momen yang tak terlupakan.",
+      keywords:
+        "Fior Wedding Organizer,perencana pernikahan,organizer pernikahan,wedding planner,paket pernikahan,layanan pernikahan",
+      openGraph: {
+        images: `${process.env.API_URL}/uploads/logo_hitam.png`,
+      },
+    };
+  }
 };
 
 export const revalidate = 60;
