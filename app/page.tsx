@@ -53,12 +53,17 @@ export default async function Home() {
 
       {data.data.length !== 0 && (
         <div className="gap-[28px] bg-[#DBBEB8] py-[32px]">
-          <div className="relative mb-10 mt-2">
-            <div className="mx-auto w-fit">
-              <h1 className="cardo-regular text-4xl text-white">
+          <div className="relative mb-10 mt-2 space-y-5">
+            <div className="mx-auto w-fit space-y-3">
+              <h1 className="cardo-regular text-3xl text-white">
                 {`Today's Insight`}
               </h1>
+              <div className="mx-auto h-[3px] w-[100%] bg-[#fff]" />
             </div>
+
+            <p className="text-center font-amiri text-[20px] font-normal leading-[35px] tracking-wide text-[#2B2B2B] text-white">
+              Must-Know Information
+            </p>
           </div>
 
           <div className="container grid gap-5 md:grid-cols-2 lg:grid-cols-3">
