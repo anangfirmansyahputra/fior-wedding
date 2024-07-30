@@ -1,3 +1,4 @@
+import Card from "@/components/card";
 import CreateWedding from "@/components/create-wedding";
 import Hero from "@/components/hero";
 import HowHelp from "@/components/how-help";
@@ -37,7 +38,11 @@ export const generateMetadata = async (): Promise<Metadata> => {
   }
 };
 
-export default function Home() {
+export default async function Home() {
+  const { data } = await axios.get(
+    `${process.env.API_URL}/api/articles-fior?page=1`,
+  );
+
   return (
     <Template>
       <Hero />
@@ -45,6 +50,34 @@ export default function Home() {
         <SectionWelcome />
         <HowHelp />
       </div>
+
+      {data.data.length !== 0 && (
+        <div className="gap-[28px] bg-[#DBBEB8] py-[32px]">
+          <div className="relative mb-10 mt-2">
+            <div className="mx-auto w-fit">
+              <h1 className="cardo-regular text-4xl text-white">
+                {`Today's Insight`}
+              </h1>
+            </div>
+          </div>
+
+          <div className="container grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {data.data.slice(0, 3).map((item: any) => (
+              <Card
+                key={item.id}
+                description={item.content}
+                href={`/portfolio/${item.slug}`}
+                image={
+                  process.env.NEXT_PUBLIC_API_URL + "/uploads/" + item.image
+                }
+                title={item.title}
+                author={item.author}
+                created_at={item.created_at}
+              />
+            ))}
+          </div>
+        </div>
+      )}
       <Testimonial />
       <CreateWedding />
     </Template>
