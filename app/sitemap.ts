@@ -16,6 +16,8 @@ type Article = {
   updated_at: string;
 };
 
+export const revalidate = 60;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { data } = await axios.get(`${process.env.API_URL}/api/articles`);
 

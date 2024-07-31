@@ -38,6 +38,8 @@ export const generateMetadata = async (): Promise<Metadata> => {
   }
 };
 
+export const revalidate = 60;
+
 export default async function Home() {
   const { data } = await axios.get(
     `${process.env.API_URL}/api/articles-fior?page=1`,
